@@ -1,0 +1,78 @@
+# Add ships from ES-Stories as author ships?
+
+person "Danau"
+	# Merchant government?
+	government "Author"
+	personality
+		# heroic?
+	phrase
+		word
+			"Check out the stunt pilots flying in formation!"
+	phrase
+		word
+			"Change the orientation of your bays for faster launches."
+	phrase
+		word
+			"Watch out for inheritance scams! They take your money but you won't get anything in return."
+	phrase
+		word
+			"When jumping into a system with combat, then make sure to arrive at some distance to fire your long-range weapons first!"
+	phrase
+		word
+			"When you want to stop your ship, then press shift and back."
+	ship "Hauler VI Fightframe" "PTR Hauler VI"
+	ship "Hauler Cockpit" "PTR C1"
+	ship "Hauler Cockpit" "PTR C2"
+	ship "Hauler AMPod" "PTR AMPod"
+	ship "Hauler FirePod" "PTR FirePod"
+	Ship "Hauler Surgical Pod" "PTR Surgical Pod"
+
+	# TODO: add 1 mStarQueen-engines and 2 mStarQueen-Carriers flying in box-formation around the Hauler VI when formation-flying gets merged.
+	# Use Alien-Mixed variants (capturable) as ships to be carried by the carriers.
+
+
+# The Hauler VI fightframe. Looks like a regular Hauler VI, but has some changes:
+# - The two cockpit sections can separate (3 flamethrowers, very fast)
+# - The 3 pods on the left contain an Emerald sword cannon (firing from under the left cockpit)
+# - One pod on the right has Archon tentacles sticking out and can separate into an archon pod (the animation after launch makes the tentacles bigger and smaller)
+#   - This pod fires an archon AM Cannon, but at an angle of 15 degrees. (So it usually misses). The archon is not fully aligned within the pod.
+#   - When this pod is moving, then it shows an archon tail.
+# - One pod on the right is a "fireworks" pod (containing things like a korath detainer, pug seekers, hai tracker pods, sidewinders) some of the missile variants are also under an angle (or maybe even firing backwards, besides the thrust flame).
+# - One pod on the right is a "surgical" pod, filled with beam-weapons
+#
+# The frame is super-slow when all heavy pods are connected/docked.
+# The frame is medium-fast when the heavy pods are deployed.
+ship "Hauler VI Fightframe"
+
+# 3x Flamethrower (nose + sides)
+# very large engine flame
+# Heavy and fast
+ship "Hauler Cockpit"
+	attributes
+		category "Drone"
+
+# Heavy and slow
+# Tentacle sticking out in docked
+# Tentacle moves more when moving.
+# Fires AM Cannon (at an angle of 15 degrees)
+# Add distancer?
+ship "Hauler AMPod"
+	attributes
+		category "Fighter"
+
+# Light, slow, medium turn
+# Filled with all kinds of fireworks (some at angle):
+# - Korath detainer
+# - Pug seeker
+# - Hai Tracker Pods
+# - Sidewinder
+# - ...
+ship "Hauler FirePod"
+	attributes
+		category "Fighter"
+
+# Light, medium speed, filled with beam weapons (laser, electron beam, korath slicer, ...)
+# Quarg Skylance on the roof?
+ship "Hauler Surgical Pod"
+	attributes
+		category "Fighter"
