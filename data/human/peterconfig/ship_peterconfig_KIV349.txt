@@ -1,3 +1,14 @@
+# Ships in fleet:
+#	name "JS - KIVbeam4 - Earthly"
+#	name "JS - KIVbeam4 - Saturnian"
+#	name "JS - KIVbeam4 - Martian"
+#	name "JS - KIVbeam4 - Solar"
+#	name "JS - KIVbeam4 - Early"
+#	name "JS - KIVbeam4 - Answer"
+#	name "JS - KIVbeam4 - Distance"
+#	name "JS - KIVbeam4 - Route"
+#	name "JS - KIVbeam4 - Progression"
+#	name "JS - KIVbeam4 - Pathway"
 ship "Kar Ik Vot 349"
 	sprite "ship/kar ik vot 349"
 	attributes

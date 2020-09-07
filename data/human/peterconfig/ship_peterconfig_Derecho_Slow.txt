@@ -1,3 +1,8 @@
+# Ship names:
+#	name "JS - Dslow9 - Hunter"
+#	name "JS - Dslow9 - Rover"
+#	name "JS - Dslow9 - Sleeper"
+#	name "JS - Dslow9 - Silence"
 ship Derecho
 	sprite ship/derecho
 	attributes

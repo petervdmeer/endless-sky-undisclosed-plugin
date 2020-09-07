@@ -1,3 +1,10 @@
+# Ship names:
+#	name "JS - Dbeam7 - Predator"
+#	name "JS - Dbeam7 - Endurance"
+#	name "JS - Dbeam7 - Sensible"
+#	name "JS - Dbeam7 - Animal"
+#	name "JS - Dbeam7 - Future"
+#	name "JS - Dbeam7 - Traveller"
 ship Derecho
 	name "JS - Dbeam7 - Predator"
 	sprite ship/derecho
