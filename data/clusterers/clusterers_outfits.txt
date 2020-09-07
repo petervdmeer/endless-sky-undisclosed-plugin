@@ -28,5 +28,32 @@ outfit "Fractal Mass Thruster"
 	
 	
 	
-	
-	
+outfit "Fractal Beam Turret"
+	category "Turrets"
+	cost 140000
+	thumbnail "outfit/laser turret"
+	"mass" 22
+	"outfit space" -22
+	"weapon capacity" -22
+	"turret mounts" -1
+	"required crew" 0
+	weapon
+		sprite "projectile/2x laser"
+			"frame rate" 1
+		"hardpoint sprite" "hardpoint/laser turret"
+		"hardpoint offset" 7.
+		sound "laser"
+		"hit effect" "beam laser impact"
+		"inaccuracy" .5
+		"turret turn" 6
+		"velocity" 220
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 1
+		"firing heat" 2.4
+		"shield damage" 8
+		"hull damage" 1.6
+	description "The same type of energy networks as the fractal mass engines, but now configured as weapon."
+	description "   Setting up the network has a limited range, but when the network hits shields then it drains them quite quickly. The network does far less damage on hulls."
+
+

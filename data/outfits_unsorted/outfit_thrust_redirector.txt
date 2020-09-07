@@ -1,0 +1,5 @@
+# Thrust redirector
+#  (minus forward thrust)
+#  (adds direction thrust, lower than forward)
+#  (generates some heat, less than delta between two above)
+#  (uses very little power)

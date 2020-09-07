@@ -1,3 +1,15 @@
+#Other inventor
+# Only when player has seen aliens.
+# Aliens gave this tech mostly willingly.
+
+#You owe me big time
+#Because of gasbag lady
+#Bunch of hippies there at Southbound.
+
+#Win by being better, or by weakening the competition.
+#Take no chances.
+
+
 mission "Rotary Cargo Transport (intro)"
 	name "Rotary Cargo Transport"
 	description "A Syndicate inventor has come up with a new way of cargo transport and needs your help with certifying the new transport ship"
