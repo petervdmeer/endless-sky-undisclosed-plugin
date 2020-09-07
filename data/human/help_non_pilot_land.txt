@@ -1,0 +1,35 @@
+# Deliver food to some-place (regular mission).
+
+# On take-off, receive message on emergency channel.
+# - Pilot ate some bad food.
+# - Some person that has no flight experience asks captain for help.
+
+# Should I press MTC (Master Trajectory Correction - Manual Trajectory Correction)?
+
+
+# Should I press ATC (Automatic Trajectory Correction - Abort Trajectory Correction)?
+"A button with ATC just started blinking should I press it?"
+choice
+	"Yes, press it!"
+	"No, don't press it!"
+
+"You hear the ship respond with "Automatic Trajectory Correction disabled".
+	
+# - Choices:
+#   - Should I press the stabilizer or the repulsor?
+
+# - Ship starts spinning around.
+
+# The ship starts spinning.
+
+# The ship starts a spinning nosedive straight towards the ground.
+
+# Suddenly retro-rockets fire, the ship levels, stabilizes the roll and performs a perfect landing.
+
+# Messing up with the systems that much so that auto-landing had to kick in!
+# Some other guy; great job; forcing the ship to beyond safety limits so that the automated system takes over.
+
+# Reporters ask what happened.
+
+# Experts don't like captain. News media declare captain a hero.
+

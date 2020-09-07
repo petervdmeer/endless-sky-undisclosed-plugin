@@ -1,0 +1,32 @@
+# Fractal thrusters/engines have negative impacts on shields?
+outfit "Fractal Mass Thruster"
+	category "Engines"
+	"cost" 560000
+	thumbnail "outfit/medium atomic thruster"
+	"mass" 53
+	"outfit space" -53
+	"engine capacity" -53
+	"thrust" 47.6
+	"thrusting energy" 5.1
+	"thrusting heat" 10.3
+	"turn" 1192
+	"turning energy" 2.5
+	"turning heat" 6.3
+	"reverse thrust" 15.4
+	"reverse thrusting energy" 1.8
+	"reverse thrusting heat" 3.5
+	"flare sprite" "effect/atomic flare/medium"
+		"frame rate" 12
+	"flare sound" "atomic medium"
+	description "This thruster creates a fractal energy network behind the ship and creates propulsion by energy/mass conversions inside this network outside the ship."
+	description "   Heat production is minimal since the thruster operates mostly outside the ship."
+	description "   Because the thruster operates outside the ship it is also possible to direct the propulsion and use the network for steering and even for a minimal amount of reverse thrust."
+	description "   This thruster can also generate the nuclear explosion as used in hyperdrives and the matter-states as used in Jump-drives, but very inefficiently."
+	
+# outfit "Bubble Thruster"
+#	description "Thruster that ejects pockets (bubbles) of energy packets for propulsion."
+	
+	
+	
+	
+	

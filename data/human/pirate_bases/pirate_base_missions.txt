@@ -1,0 +1,80 @@
+# TODO: add bombardment Cannon version of maurader ships.
+
+fleet "Pirate base fleet (Tropical)"
+	government "Pirate"
+	names "pirate"
+	fighters "pirate"
+	cargo 3
+	personality
+		disables plunders opportunistic
+	variant
+		"Pirate Base Tropical"
+		"Marauder Queen (Carrier)" 3
+		"Fighter Shuttle" 9
+		"Combat Drone" 6
+		"Marauder Behemoth (Engines)"
+
+fleet "Pirate base fleet (Butcher)"
+	government "Pirate"
+	names "pirate"
+	fighters "pirate"
+	cargo 3
+	personality
+		disables plunders opportunistic
+	variant
+		"Pirate Base Butcher"
+		"Finch (Alien-Mixed Fast Inhibitor)" 18
+		"Finch (Alien-Mixed Fast Flamethrower)" 4
+		"Fighter Shuttle" 2
+		"Far Lek 14 (Alien-mixed Flamethrower)" 8
+		"Flea (Alien-Mixed Fast Blaster)" 3
+		"Flycatcher (Alien-Mixed Fast Laser Turret)" 5
+		"Marauder Behemoth (Engines)" 2
+		"Marauder Queen (Engines)"
+
+mission "Destroy pirate base (Tropical)"
+	name "Destroy pirate base"
+	description "Some pirate warlord that recently lost a planetary base and built a mobile base for their cladestine operations. Destroy it and return to <planet> for payment (<payment>)."
+	repeat 1
+	job
+	to offer
+		and
+			"combat rating" > 7903
+			random > 10		
+	source
+		government "Free Worlds"
+		attributes rim south north "dirt belt" core frontier
+	npc kill
+		fleet "Pirate base fleet (Tropical)"
+		personality heroic staying nemesis target
+		government Bounty
+		system
+			distance 1 2
+		dialog "The <npc> base has been destroyed. You can claim the bounty payment by returning to <destination>."
+	on complete
+		payment 900000
+		dialog "The government of <planet> gratefully pays you <payment> for destroying the pirate base <npc>."
+
+mission "Destroy pirate base (Butcher)"
+	name "Destroy pirate base"
+	description "Some pirate warlord that recently lost a planetary base has built a mobile base for cladestine operations. Destroy it and return to <planet> for payment (<payment>)."
+	repeat 1
+	job
+	#TODO: offer after tropical, and make story out of it (destroyed base earlier, Remnant message)
+	to offer
+		and
+			"combat rating" > 7903
+			random > 10		
+	source
+		government "Free Worlds"
+		attributes rim south north "dirt belt" core frontier
+	npc kill
+		fleet "Pirate base fleet (Butcher)"
+		personality heroic staying nemesis target
+		government Bounty
+		system
+			distance 1 2
+		dialog "The <npc> base has been destroyed. You can claim the bounty payment by returning to <destination>."
+	on complete
+		payment 900000
+		dialog "The government of <planet> gratefully pays you <payment> for destroying the pirate base <npc>."

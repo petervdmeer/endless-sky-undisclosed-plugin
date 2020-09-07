@@ -1,0 +1,69 @@
+ship "Pirate Base" "Pirate Base Tropical"
+	sprite "ship/pirate_base_tropical"
+	plural "Pirate Bases"
+	attributes
+		category "Transport"
+		#Costs: Bactrian + 5x Hauler III + 4x Freighter
+		"cost" 36820000
+		#Shields: Bactrian + 4x Hauler III
+		"shields" 30700
+		#Hull: Bactrian + 2x Hauler III
+		"hull" 18000
+		"required crew" 70
+		#Bunks: 1x Bactrian + 1x Hauler III (no other cockpits/passenger areas)
+		"bunks" 257
+		#Mass: 1x Bactrian, 4x Hauler III, 4x Freighter, 4x 1/2 Protector
+		"mass" 4780
+		"drag" 40
+		"heat dissipation" .4
+		"fuel capacity" 400
+		#Cargo space: 1x Bactrian, 130/pod * 13 pods, 4x Freighter, 4x Protector
+		"cargo space" 6954
+		"outfit space" 1290
+		#Weapon capacity: same as bactrian (but only turrets)
+		"weapon capacity" 300
+		#Engine capacity: 1x Bactrian, 1,5x Hauler III, 2x Protector
+		"engine capacity" 400
+		weapon
+			"blast radius" 260
+			"shield damage" 2600
+			"hull damage" 1300
+			"hit force" 3900
+	outfits
+		"Heavy Laser Turret" 4
+		"Heavy Anti-Missile Turret" 2
+		"Fusion Reactor" 2
+		"LP144a Battery Pack" 2
+		"D94-YV Shield Generator" 4
+		"Large Radar Jammer" 3
+		"X3200 Ion Steering"
+		"X4700 Ion Thruster" 2
+		"X5200 Ion Steering" 2
+		"Hyperdrive"
+
+	turret -145 -300 "Heavy Anti-Missile Turret"
+	turret 130 -290 "Heavy Laser Turret"
+	turret -144 -38 "Heavy Laser Turret"
+	turret -96 30 "Heavy Laser Turret"
+	turret -163 90 "Heavy Laser Turret"
+	turret -159 296 "Heavy Anti-Missile Turret"
+	fighter -160 84
+	fighter -87 146
+	fighter -169 207
+	engine -81 -252
+	engine -173 -252
+	engine 153 -245
+	engine -140 340
+	engine -104 340
+	engine -32 280
+	engine -10 280
+	engine 27 340
+	engine 49 340
+	explode "small explosion" 25
+	explode "medium explosion" 35
+	explode "large explosion" 45
+	explode "huge explosion" 30
+	"final explode" "final explosion large"
+	description "A number of ships welded together to form a mobile base for cladestine operations. The base was nicknamed tropical due to the palmtree shapes that some people recognize in the shape of the base."
+
+

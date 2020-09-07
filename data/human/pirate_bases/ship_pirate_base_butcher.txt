@@ -1,0 +1,115 @@
+ship "Pirate Base" "Pirate Base Butcher"
+	sprite "ship/pirate_base_butcher"
+	plural "Pirate Bases"
+	attributes
+		category "Transport"
+		"cost" 42820000
+		"shields" 12000
+		"hull" 19000
+		"required crew" 90
+		"bunks" 316
+		"mass" 6810
+		"drag" 40
+		"heat dissipation" .4
+		"fuel capacity" 200
+		"cargo space" 1822
+		"outfit space" 1490
+		"weapon capacity" 400
+		"engine capacity" 400
+		"cloak" .02
+		"cloaking energy" 10
+		"cloaking fuel" .2
+		weapon
+			"blast radius" 260
+			"shield damage" 2600
+			"hull damage" 1300
+			"hit force" 3900
+	outfits
+		"Sidewinder Missile Launcher" 7
+		"Meteor Missile Launcher"
+		"Sidewinder Missile" 350
+		"Meteor Missile" 35		
+		"Heavy Anti-Missile Turret" 4
+		"Quad Blaster Turret" 4
+		"Modified Blaster Turret" 4
+		"Fusion Reactor" 2
+		"LP144a Battery Pack" 2
+		"D94-YV Shield Generator" 4
+		"Large Radar Jammer" 3
+		"X3200 Ion Steering"
+		"X4700 Ion Thruster" 2
+		"X5200 Ion Steering" 2
+		"Hyperdrive"
+	gun -253.25 -115 "Sidewinder Missile Launcher"
+	gun -221.25 -115 "Sidewinder Missile Launcher"
+	gun -130.75 -329.5 "Sidewinder Missile Launcher"
+	gun -95.75 -331 "Sidewinder Missile Launcher"
+	gun 165.75 -320.5 "Sidewinder Missile Launcher"
+	gun 206.25 -322.5 "Sidewinder Missile Launcher"
+	gun 231.25 -135 "Sidewinder Missile Launcher"
+	gun 252.25 24 "Meteor Missile Launcher"
+	turret -254.25 -49.5 "Quad Blaster Turret"
+	turret -220.25 -49 "Heavy Anti-Missile Turret"
+	turret -55.75 -257 "Modified Blaster Turret"
+	turret -12.25 -256 "Quad Blaster Turret"
+	turret 46.25 -258 "Modified Blaster Turret"
+	turret 89.25 -257.5 "Quad Blaster Turret"
+	turret 132.25 -258 "Heavy Anti-Missile Turret"
+	turret 209.75 -90 "Modified Blaster Turret"
+	turret 210.25 162 "Quad Blaster Turret"
+	turret 226.25 161.5 "Heavy Anti-Missile Turret"
+	turret -80.75 326.5 "Modified Blaster Turret"
+	turret -145.25 326 "Heavy Anti-Missile Turret"
+	engine -253.25 116.5
+	engine -221.25 116.5
+	engine -132.75 346.5
+	engine -92.75 346.5
+	engine 196.75 304
+	engine 223.75 304
+	engine 250.25 153
+	fighter 186 -312 under
+	drone 186 -239 over
+	fighter -113 -320 over
+	fighter 190 -7 under
+	fighter -268 -7 under right
+	fighter 132 -325 over
+	fighter 89 -325 over
+	fighter 46 -325 over
+	fighter -13 -325 over
+	fighter -56 -325 over
+	drone -36 -240 under
+	drone 16 -227 under back
+	drone 68 -224 under back
+	drone 110 -224 under back
+	fighter -176 -263 over left
+	fighter -176 -214 over left
+	fighter -176 -164 over left
+	fighter -176 -112 over left
+	fighter -176 -64 over left
+	fighter -176 -12 over left
+	fighter -176 38 over left
+	fighter -176 87 over left
+	fighter -176 136 over left
+	fighter -176 187 over left
+	fighter -176 237 over left
+	fighter -176 286 over left
+	drone -50 -164 over right
+	drone -50 136 over right
+	drone -50 187 over right
+	drone -50 237 over right
+	drone -50 286 over right
+	fighter 166 148 over
+	fighter 24 150.5 over
+	fighter 112 258 over back
+	drone 210 212 over
+	drone 230 56 over
+	drone 94 158 over
+	drone 40 271 over
+	drone 9 -42 under
+	drone 124 -42 under
+	explode "small explosion" 25
+	explode "medium explosion" 35
+	explode "large explosion" 45
+	explode "huge explosion" 30
+	"final explode" "final explosion large"
+	description "The second pirate base you encountered. This base was not constructed elegantly. Ships have been cut apart and welded together, an engine-exaust is used as fighter dock and other fighter docks were just rudely patched on top of various components, two remant ships are cut open and spliced as slaughtered animals in the middle of the base. The remant ships give this base a very short-term minimal amount of cloacking."
