@@ -2,8 +2,14 @@
 # Use a fighter without drives as author ship?
 # Don't put hyperdrive and jumpdrive in ship below? (Requiring take-off from planet.)
 
+# Ship in Hexagonal shape (flat side front)?
+
+# Ship in Hexagonal shape (point front)?
+# Weapons at angles? (flat sides)
+# Bays in 12 directions (flat sides and points)?
+# Guns in 12 directions (flat sides and points)?
+
 person "Danau"
-	# Merchant government?
 	government "Author"
 	personality
 		# Merchant personalities
@@ -22,6 +28,11 @@ person "Danau"
 	phrase
 		word
 			"When you want to stop your ship, then press shift and back."
+	phrase
+		word
+			"This is a nice ship, as long as you don't activate the cargo refridgeration systems."
+			
+			
 	ship "Hauler VI Fightframe" "PTR Hauler VI"
 	ship "Hauler Cockpit" "PTR Flamehead 1"
 	ship "Hauler Cockpit" "PTR Flamehead 2"
