@@ -1,13 +1,18 @@
-# Add ships from ES-Stories as author ships?
-# Use a fighter without drives as author ship?
-# Don't put hyperdrive and jumpdrive in ship below? (Requiring take-off from planet.)
+# Author ship for Petervdmeer.
 
-# Ship in Hexagonal shape (flat side front)?
-
-# Ship in Hexagonal shape (point front)?
-# Weapons at angles? (flat sides)
-# Bays in 12 directions (flat sides and points)?
-# Guns in 12 directions (flat sides and points)?
+# Ship type: Hauler VI
+# Using regular Hauler engines (and Hauler speeds).
+# No hyperdrive, jumpdrive or keystones (requiring take-off from planet).
+#
+#
+# Alternatives considered (which might be nice for other authors):
+# - A ship from ES-Stories (the ES Bactrian looks very nice)
+# - Fighter without drives
+# - A ship in Hexagonal shape (flat side front)?
+# - A ship in Hexagonal shape (point front), with bays and weapons in 12 directions
+# - Star Queen Engines variant
+# - Star Queen Carrier variant
+# - Marauder Behemoth
 
 person "Danau"
 	government "Author"
@@ -18,7 +23,34 @@ person "Danau"
 			"Check out the stunt pilots flying in formation on Earths Day!"
 	phrase
 		word
-			"Change the orientation of your bays for faster fighter launches."
+			"Don't mess with the Author ships."
+		word
+			" "
+		word
+			"Or do."
+			"I prefer to be left alone."
+			"They can be more dangerous than they look."
+	phrase
+		word
+			"Change the orientation of your"
+		word
+			" "
+		word
+			"drone"
+			"heavy interceptor"
+			"interceptor"
+			"fighter"
+		word
+			" "
+		word
+			"bays"
+			"docking ports"
+		word
+			" "
+		word
+			"just for the fun of it."
+			"for faster deployments."
+			"to improve atmospheric handling."
 	phrase
 		word
 			"Watch out for inheritance scams! They take your money but you won't get anything in return."
@@ -30,10 +62,63 @@ person "Danau"
 			"When you want to stop your ship, then press shift and back."
 	phrase
 		word
-			"This is a nice ship, as long as you don't activate the cargo refridgeration systems."
+			"This is a nice ship, "
+		word
+			"and I especially like the custom weapon that I put on it."
+			"as long as you don't activate the cargo refridgeration systems."
+			"but it didn't get beyond the prototype stage yet."
+			"but it is not for sale on the regular market yet."
+			"but two Hauler IIIs is probably more economical."
+	phrase
+		word
+			"Automate"
+			"Extend"
+			"Improve"
+			"Streamline"
+		word
+			" "
+		word
+			"my"
+			"our"
+			"the ES"
+			"your"
+		word
+			" "
+		word
+			"builds"
+			"builds and tests"
+			"ci jobs"
+			"coding style checks"
+			"hardware tests"
+			"integration processes"
+			"merge process"
+			"software tests"
+			"test and integration processes"
+			"test processes"
+			"tests"
+		word
+			"."
+			"!"
+		word
+			"So that I"
+			"So that we"
+			"So that you"
+			"To"
+		word
+			" have more time for good reviews."
+			" have more time for playing the game."
+			" prevent bugs."
+	# Hitchhiker's guide to the galaxy references.
+	# Todo: improve the towel references (or just add towel day into the game).
+	phrase
+		word
+			"Did you bring your towel?"
+	phrase
+		word
+			"The answer is 42."
 			
 			
-	ship "Hauler VI Fightframe" "PTR Hauler VI"
+	ship "Hauler VI Fightframe" "PTR HVI 42"
 	ship "Hauler Cockpit" "PTR Flamehead 1"
 	ship "Hauler Cockpit" "PTR Flamehead 2"
 	ship "Fireworks Pod" "PTR FirePod 1"
@@ -42,6 +127,16 @@ person "Danau"
 
 	# TODO: add 1 mStarQueen-engines and 2 mStarQueen-Carriers flying in box-formation around the Hauler VI when formation-flying gets merged.
 	# Use Alien-Mixed variants (capturable) as ships to be carried by the carriers.
+
+
+# Very slow ship that uses tractor beam to pull itself towards enemy ships? (beam with hook-type shapes)
+# - Beam pulls the Hauler VI (mostly) and the target ship only minimally.
+# Second tractor/repulsor beam at short distance?
+# Flamethrowers around the ship? (Or the Welder?)
+# Skylances on the ship?
+
+
+
 
 
 # The Hauler VI fightframe. Looks like a regular Hauler VI, but has some changes:
