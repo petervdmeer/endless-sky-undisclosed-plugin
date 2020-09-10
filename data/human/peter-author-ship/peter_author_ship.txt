@@ -3,21 +3,30 @@
 # Ship type: Hauler VI
 # Using regular Hauler engines (and Hauler speeds).
 # No hyperdrive, jumpdrive or keystones (requiring take-off from planet).
-#
-#
-# Alternatives considered (which might be nice for other authors):
-# - A ship from ES-Stories (the ES Bactrian looks very nice)
-# - Fighter without drives
+
+
+
+# Alternatives considered:
+# - Have parts of the Hauler VI detach as separate ships (cockpit as fast attacker with flamethrowers, pods as missile launchers)
+# - Have all parts move at very high speed after separation.
+# - Have a Sheragi cannon built in into the left 3 pods.
+# - Installing skylances on the Hauler VI.
+
+# Alternative ships considered (instead of the Hauler VI or possibly as ships flying in formation):
 # - A ship in Hexagonal shape (flat side front)?
 # - A ship in Hexagonal shape (point front), with bays and weapons in 12 directions
-# - Star Queen Engines variant
-# - Star Queen Carrier variant
+# - Fighter without drives
+# - A ship from ES-Stories (the ES Bactrian looks very nice)
+# - Star Queen Engines variant (possibly flying in formation with the Hauler VI)
+# - Star Queen Carrier variant (possibly flying in formation with the Hauler VI)
 # - Marauder Behemoth
+
+
 
 person "Danau"
 	government "Author"
 	personality
-		# Merchant personalities
+		# Merchant personalities? Personality that uses the built in weapons.
 	phrase
 		word
 			"Check out the stunt pilots flying in formation on Earths Day!"
@@ -129,30 +138,14 @@ person "Danau"
 		word
 			"The answer is 42."
 			
-			
 	ship "Hauler VI (PTR)" "PTR HVI 42"
 
-
-	# TODO: add 1 mStarQueen-engines and 2 mStarQueen-Carriers flying in box-formation around the Hauler VI when formation-flying gets merged.
-	# Use Alien-Mixed variants (capturable) as ships to be carried by the carriers.
 
 
 # Very slow ship that uses tractor beam to pull itself towards enemy ships? (beam with hook-type shapes)
 # Second tractor/repulsor beam at short distance?
 # Flamethrowers around the ship? (Or the Welder?)
 # Skylances on the ship?
-
-
-
-
-
-# The Hauler VI fightframe. Looks like a regular Hauler VI, but has some changes:
-# - The two cockpit sections can separate (3 flamethrowers, very fast)
-# - The 3 pods on the left contain an Emerald sword cannon (firing from under the left cockpit)
-# - One pod on the right is a "fireworks" pod (containing things like a korath detainer and other cannons)
-# - One pod on the right is a "fireworks" pod (containing things like pug seekers, hai tracker pods, sidewinders) some of the missile variants are also under an angle (or maybe even firing backwards, besides the thrust flame).
-# - One pod on the right is a "surgical" pod, filled with beam-weapons
-#
 
 
 
@@ -168,5 +161,5 @@ outfit "Meet and Greet Beam"
 # Then it splits into 6 sub-projectiles that are beams with some distance.
 # Then the end of the 6 sub-projectiles (and the core sub projectile) explode.
 # The explosion is disabling, not destroying.
-# Black cloud in explosion?
+# Black cloud as explosion?
 outfit "Inverse Launcher"
