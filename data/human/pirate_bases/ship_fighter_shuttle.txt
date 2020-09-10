@@ -60,7 +60,8 @@ ship "Fighter Shuttle" "Fighter Shuttle (alien)"
 		"drag" 1.6
 		"heat dissipation" .7
 		"cargo space" 0
-		"outfit space" 100
+		#TODO: fix back to 100
+		"outfit space" 107
 		"weapon capacity" 10
 		"engine capacity" 60
 		weapon

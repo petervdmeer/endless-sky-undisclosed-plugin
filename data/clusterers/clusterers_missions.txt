@@ -32,7 +32,7 @@
 #   Yes, I am the one you are looking for.
 #   No, you need someone else.
 
-mission "First contact: worm species"
+mission "First contact: clusterers"
 	source
 		attributes worm_planet
 	destination Earth
@@ -129,8 +129,9 @@ mission "First contact: Jumpers"
 			`   During landing you noticed ground-based guidance signal lights and decide to land near one of the lights that flashes in blue.`
 			`   Beyond the initial message you are mostly ignored. The large creatures are flying past you as if you are not there and you need to evade some to avoid a colission.`
 			`Some beacons guided you to a huge landing site, but otherwise`
-			`You are called the Jumpers?`
-			'   Yes, we are.`
+			choice
+				`You are called the Jumpers?`
+				`   Yes, we are.`
 
 
 # Ask players name

@@ -14,13 +14,11 @@ ship Derecho
 		drag 8.7
 		"engine capacity" 164
 		"fuel capacity" 500
-		"gun ports" 4
 		"heat dissipation" 0.6
 		hull 32700
 		"outfit space" 796
 		"required crew" 53
 		shields 53200
-		"turret mounts" 4
 		"weapon capacity" 342
 	outfits
 		"Systems Core (Medium)"

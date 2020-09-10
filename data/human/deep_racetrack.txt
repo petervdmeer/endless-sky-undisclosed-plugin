@@ -1,6 +1,3 @@
-attributes: rich tourism
-
-
 # This adds a racetrack in the Suhail system
 # * Bactrian, Mules and Star Queens as spectator ships.
 # * Observation drones as track markers.
@@ -19,7 +16,7 @@ mission "Deep Race: Megaparsec team"
 	stopover "Sunracer"
 	source
 		government "Deep"
-		not Suhail
+		not system Suhail
 	to offer
 		"reputation: Deep" > 10
 		"reputation: Syndicate" > 10
@@ -31,56 +28,55 @@ mission "Deep Race: Megaparsec team"
 	on complete
 		dialog `You get paid <payment> credits after unloading is done and the team departs. You consider if you should visit the spaceport to see if there are more interresting jobs for you.`
 	on offer
-		`You just started eating your dinner in a local restaurant when you hear loudspears activate for a public announcement;`
-		`"Attention! Attention! Be warmly welcomed by the friendly citizens of Hell...AHHH!" Blam! "Get him!"`
-		`There are some more sounds of violence, sounds of people running away and then there is silence.`
-		`Most restaurant visitors look a bit puzzled and some young Syndicate pilots at a table next to you are laughing.`
-		choice
-			`Check with the Syndicate pilots to see if they know what happened.`
-			goto socialize
-			`Finish your meal and just wait to see what happens further.`
-			goto mealfinish
-			`Ignore the whole thing.`
-			decline
-		label socialize
-		`When you turn to the pilots, then one of the pilots responds; "Beat it, old-timer, we've got more important things to do than chat with you."`
-		choice
-			`"Listen kid, if you want to become successfull in the space-piloting business, then you better talk to people."`
-			`(Hit the pilot on the nose.)`
-			`(Kick the young brat with your super karate move.)`
-			`(Ignore them and return to your dinner.)`
-		label mealfinish
-		`While finishing your dinner you notice that the Syndicate pilots become a bit nervous.`
+		conversation
+			`You just started eating your dinner in a local restaurant when you hear loudspears activate for a public announcement;`
+			`"Attention! Attention! Be warmly welcomed by the friendly citizens of Hell...AHHH!" Blam! "Get him!"`
+			`There are some more sounds of violence, sounds of people running away and then there is silence.`
+			`Most restaurant visitors look a bit puzzled and some young Syndicate pilots at a table next to you are laughing.`
+			choice
+				`Check with the Syndicate pilots to see if they know what happened.`
+					goto socialize
+				`Finish your meal and just wait to see what happens further.`
+					goto mealfinish
+				`Ignore the whole thing.`
+					decline
+			label socialize
+			`When you turn to the pilots, then one of the pilots responds; "Beat it, old-timer, we've got more important things to do than chat with you."`
+			choice
+				`"Listen kid, if you want to become successfull in the space-piloting business, then you better talk to people."`
+				`(Hit the pilot on the nose.)`
+				`(Kick the young brat with your super karate move.)`
+				`(Ignore them and return to your dinner.)`
+			label mealfinish
+			`While finishing your dinner you notice that the Syndicate pilots become a bit nervous.`
 
 
-		# Main pilot (making the announcement) arrested and ship confiscated.
-		# Syndicate pilots need help from captain <first> <last>.
-		# Rich relative at stop-over. Side mission to help relative get the arrested guy free.
+			# Main pilot (making the announcement) arrested and ship confiscated.
+			# Syndicate pilots need help from captain <first> <last>.
+			# Rich relative at stop-over. Side mission to help relative get the arrested guy free.
 
-		choice
-			"Do you need some help?"
+			choice
+				"Do you need some help?"
 
 
 
 mission "deep race - intro"
 	name "Find more information about the race that is being organized."
 	description "The government on Helheim is organizing a race to promote the planet and attract new workers to the mining operations."
-
-
-	A man in a suit approaches you, "Hey <first>, great to see you here! Listen, I'm organising the race here in Suhail, do you want to help out?"
-	"Sure I'll help."
-		accept
-	"Did we meet before?"
-	"What help do you need?"
-
-
-	"I have found some Syndicate racing pilots that want to help us with marketing."
-
-	"Fly to Sol, spread folders over the touristic centra on Earth and Luna"
+	on offer
+		conversation
+			`A man in a suit approaches you, "Hey <first>, great to see you here! Listen, I'm organising the race here in Suhail, do you want to help out?"`
+			choice
+				`"Sure I'll help."`
+					accept
+				`"Did we meet before?"`
+				`"What help do you need?"`
+			"I have found some Syndicate racing pilots that want to help us with marketing."
+			"Fly to Sol, spread folders over the touristic centra on Earth and Luna"
 
 
 
-mission "Deep Race: Megaparsec team"
+mission "Deep Race: Megaparsec team2"
 	name "Transport the Megaparsec racing team to race"
 
 	on complete
@@ -90,8 +86,8 @@ mission "Deep Race: Megaparsec team"
 		conversation
 			`Just when you are about to disembark from your ship you receive a high priority message: "The gentle people from Hell..." The transmission is suddenly cut.`
 			choice
-				'	(Wait if more will get transmitted)'
-				'	(Disembark from your ship)'
+				`	(Wait to see if more will get transmitted)`
+				`	(Disembark from your ship)`
 					goto disembark
 			`	You wait for a couple of minutes, but no new message arrives.`
 			label disembark
@@ -107,6 +103,7 @@ mission "Deep Race: Megaparsec team"
 				`	"What did this guy do?"`
 				`	"He really is in my ship, get him out!"`
 					goto in_ship
+			label in_ship
 
 
 
@@ -131,11 +128,7 @@ mission "Deep Race: Lionheart team"
 				`	"I'll see what I can do."`
 					accept
 				`	"Are there any other teams which you like to get on board?"`
-
-
-
-
-		The organizer of the race is happy that the team arrived. He gives you a smile and says; "I might have another job for you, meet me in the spaceport after unloading if you are interrested."`
+			`The organizer of the race is happy that the team arrived. He gives you a smile and says; "I might have another job for you, meet me in the spaceport after unloading if you are interrested."`
 
 # Missions:
 # # Receive advertisement
@@ -178,26 +171,19 @@ mission "Deep Race - Track"
 
 event "Deep Race - Commlinks down"
 	unvisit Suhail
-	unvisit "Leviathan Station"
-	unvisit "Helheim"
 	unvisit "Aspidiske"
 	unvisit "Naos"
-	unvisit "Asgard"
 
 
 
-
-
-Alexandria, deep tourism (boring books)
-
-Kursa, Farseer : tourism rich
-Tejat, Calda   : tourism rich
-
-Porrima, New Switzerland: tourism (some ski resorts)
+#Alexandria, deep tourism (boring books)
+#Kursa, Farseer : tourism rich
+#Tejat, Calda   : tourism rich
+#Porrima, New Switzerland: tourism (some ski resorts)
 
 
 # Sponsored by the Atomic Engines manufacturing group.
-	attributes "near earth" tourism mining
+#	attributes "near earth" tourism mining
 
 
 

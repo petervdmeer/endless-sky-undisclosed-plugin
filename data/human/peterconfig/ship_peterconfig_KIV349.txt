@@ -20,14 +20,12 @@ ship "Kar Ik Vot 349"
 		drag 16.8
 		"engine capacity" 173
 		"fuel capacity" 400
-		"gun ports" 4
 		"heat dissipation" 0.5
 		hull 65400
 		"outfit space" 1054
 		ramscoop 3
 		"self destruct" 0.8
 		shields 57200
-		"turret mounts" 8
 		"weapon capacity" 447
 	outfits
 		"Large Heat Shunt" 2

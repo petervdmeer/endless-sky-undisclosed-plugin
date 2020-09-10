@@ -36,7 +36,7 @@ mission "Rotary Cargo Transport (intro)"
 					decline
 			label help
 			`After you accept the inventor runs to a ship that was parked behind the pile of containers.`
-			`The inventor takes of in a small starbarge and takes position about a kilometer above the spaceport."
+			`The inventor takes of in a small starbarge and takes position about a kilometer above the spaceport.`
 			`Then the inventors ship suddenly opens fire at the containers and each time a container is hit it is launched into the air.`
 			`It looks quite messy at first, but you realize when half of the pile is launched that there is a pattern in the launched containers.`
 
