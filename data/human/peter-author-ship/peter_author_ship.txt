@@ -21,6 +21,9 @@ person "Danau"
 	phrase
 		word
 			"Check out the stunt pilots flying in formation on Earths Day!"
+			"Watch out for inheritance scams! They take your money but you won't get anything in return."
+			"When jumping into a system with combat, then make sure to arrive at some distance to fire your long-range weapons first!"
+			"When you want to stop your ship, then press shift and back."
 	phrase
 		word
 			"Don't mess with the Author ships."
@@ -50,21 +53,30 @@ person "Danau"
 		word
 			"just for the fun of it."
 			"for faster deployments."
+			"on your new Marauder ship."
 			"to improve atmospheric handling."
 	phrase
 		word
-			"Watch out for inheritance scams! They take your money but you won't get anything in return."
-	phrase
+			"I have a delivery for"
+			"I'm looking for"
 		word
-			"When jumping into a system with combat, then make sure to arrive at some distance to fire your long-range weapons first!"
-	phrase
+			" "
 		word
-			"When you want to stop your ship, then press shift and back."
+			"Arrakis"
+			"Caladan"
+			"Dune"
+		word
+			"; "
+		word
+			"do you know where I can find that planet?"
+			"is this the correct game?"
+			"which hyperlane should I take to get there?"
+			"that planet shouldn't be far from here."
 	phrase
 		word
 			"This is a nice ship, "
 		word
-			"and I especially like the custom weapon that I put on it."
+			"and I especially like the custom weapons that I put on it."
 			"as long as you don't activate the cargo refridgeration systems."
 			"but it didn't get beyond the prototype stage yet."
 			"but it is not for sale on the regular market yet."
@@ -118,19 +130,14 @@ person "Danau"
 			"The answer is 42."
 			
 			
-	ship "Hauler VI Fightframe" "PTR HVI 42"
-	ship "Hauler Cockpit" "PTR Flamehead 1"
-	ship "Hauler Cockpit" "PTR Flamehead 2"
-	ship "Fireworks Pod" "PTR FirePod 1"
-	ship "Fireworks Pod" "PTR FirePod 2"
-	ship "Fireworks Pod" "PTR FirePod 3"
+	ship "Hauler VI (PTR)" "PTR HVI 42"
+
 
 	# TODO: add 1 mStarQueen-engines and 2 mStarQueen-Carriers flying in box-formation around the Hauler VI when formation-flying gets merged.
 	# Use Alien-Mixed variants (capturable) as ships to be carried by the carriers.
 
 
 # Very slow ship that uses tractor beam to pull itself towards enemy ships? (beam with hook-type shapes)
-# - Beam pulls the Hauler VI (mostly) and the target ship only minimally.
 # Second tractor/repulsor beam at short distance?
 # Flamethrowers around the ship? (Or the Welder?)
 # Skylances on the ship?
@@ -146,50 +153,20 @@ person "Danau"
 # - One pod on the right is a "fireworks" pod (containing things like pug seekers, hai tracker pods, sidewinders) some of the missile variants are also under an angle (or maybe even firing backwards, besides the thrust flame).
 # - One pod on the right is a "surgical" pod, filled with beam-weapons
 #
-# The frame is super-slow when all heavy pods are connected/docked.
-# The frame is medium-fast when the heavy pods are deployed.
-ship "Hauler VI Fightframe"
-	outfits
-		#Installed under an angle of 15 degrees?
-		#Make this a separate fighter? (needs custom fighter classes)
-		"Dragonflame Cannon"
 
-# very large engine flame
-# Heavy and fast
-ship "Hauler Cockpit"
-	attributes
-		category "Drone"
-	outfits
-		# 3x Flamethrower (both on the sides)
-		"Flamethrower" 6
 
-# Heavy, slow, medium turn
-ship "Fountain Pod"
-	attributes
-		category "Fighter"
-	outfits
-		# installed diagonally (lower-left to upper-right and lower-right to upper-left) in pod
-		"Korath Detainer" 2
-		# installed inbetween detainer (in angles inbetween)
-		"Bombardment Cannon" 4
-		"Tier 3 Anti-Missile" 1
-		
-ship "Fireworks Pod"
-	attributes
-		category "Fighter"
-	outfits
-		# Facing forward
-		"Sidewinder Missile Launcher"
-		"Meteor Missile Launcher"
-		"Finisher Pod"
-		"Korath Piercer Launcher"
-		"Hai Tracker Pod"
-		# Facing to the sides, from the corners
-		"Pug seeker" 4
-		"Drak Distancer"
 
-# Light, medium speed, filled with beam weapons (laser, electron beam, korath slicer, ...)
-# Quarg Skylance on the roof?
-ship "Surgical Pod"
-	attributes
-		category "Fighter"
+
+# Long distance grappling hook (distance 6000?). Beam with small hooks on the side.
+# Beam that pulls the firing ship (mostly) and the target ship only minimally.
+outfit "Meet and Greet Beam"
+
+
+# Normally ships launch projectiles. In this case the projectile launches the ship.
+# Enormous firing-hit-force.
+# Projectile travels a short distance.
+# Then it splits into 6 sub-projectiles that are beams with some distance.
+# Then the end of the 6 sub-projectiles (and the core sub projectile) explode.
+# The explosion is disabling, not destroying.
+# Black cloud in explosion?
+outfit "Inverse Launcher"
