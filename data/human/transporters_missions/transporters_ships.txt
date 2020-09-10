@@ -1,6 +1,7 @@
 # Haulers numbering is based on the amount of containers, so with six containers we call this one the Hauler VI.
-ship "Hauler VI"
-	sprite "ship/hauler vi"
+ship "Hauler VI prototype"
+	sprite "ship/hauler vi prototype"
+	thumbnail "thumbnail/hauler vi prototype"
 	attributes
 		category "Heavy Freighter"
 		"cost" 6520000
@@ -13,8 +14,8 @@ ship "Hauler VI"
 		"heat dissipation" .6
 		"fuel capacity" 500
 		"cargo space" 780
-		"outfit space" 420
-		"weapon capacity" 140
+		"outfit space" 480
+		"weapon capacity" 160
 		"engine capacity" 120
 		weapon
 			"blast radius" 100
@@ -44,13 +45,75 @@ ship "Hauler VI"
 	engine -82 196
 	engine 0 196
 	engine 82 196
+	leak "leak" 60 50
+	leak "flame" 50 80
+	leak "big leak" 90 30
 	explode "small explosion" 15
 	explode "medium explosion" 30
 	explode "large explosion" 20
 	explode "huge explosion" 5
 	"final explode" "final explosion large"
-	description "A recent update to double the capacity of the Hauler III. Costs, crew requirements, and mass however also doubled, while engine space only increased by half."
-	description "   Most captains will prefer to fly with two Hauler III ships instead of a single Hauler VI."
+	description "A prototype to test an update to double the capacity of the Hauler III. Costs, crew requirements, and mass however also doubled in this prototype, while engine space only increased by half."
+	description "   The production version needs some more improvements, otherwise most captains will prefer to fly with two Hauler III ships instead of a single Hauler VI."
+
+
+
+ship "Hauler VI"
+	sprite "ship/hauler vi"
+	thumbnail "thumbnail/hauler vi"
+	attributes
+		category "Heavy Freighter"
+		"cost" 5460000
+		"shields" 2500
+		"hull" 9500
+		"required crew" 3
+		"bunks" 12
+		"mass" 910
+		"drag" 18
+		"heat dissipation" .6
+		"fuel capacity" 400
+		"cargo space" 780
+		"outfit space" 450
+		"weapon capacity" 140
+		"engine capacity" 120
+		weapon
+			"blast radius" 80
+			"shield damage" 900
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		"Meteor Missile Launcher" 2
+		"Meteor Missile" 60
+		"Quad Blaster Turret" 2
+		"Heavy Anti-Missile Turret" 2
+		"S3 Thermionic" 2
+		"LP072a Battery Pack"
+		"D23-QP Shield Generator"
+		"Small Radar Jammer"
+		"Greyhound Plasma Thruster" 2
+		"Impala Plasma Steering"
+		"Hyperdrive"
+
+	engine -45 122.5
+	engine 45 122.5
+	gun -14.5 -92.5
+	gun 14.5 -92.5
+	turret -65 -122 "Quad Blaster Turret"
+	turret 65 -122 "Heavy Anti-Missile Turret"
+	turret -58 152 "Heavy Anti-Missile Turret"
+	turret 58 152 "Quad Blaster Turret"
+	leak "leak" 60 50
+	leak "flame" 50 80
+	leak "big leak" 90 30
+	explode "tiny explosion" 20
+	explode "small explosion" 35
+	explode "medium explosion" 20
+	explode "large explosion" 5
+	"final explode" "final explosion medium"
+	description "A recent update to double the capacity of the Hauler III. Costs and mass however are also nearly doubled, while engine space only increased by half."
+	description "   This ship is definitely slower than two Hauler III ships, but captains only interrested in cargo space might be interrested."
+
+
 
 ship "Hauler CIV"
 	sprite "ship/hauler civ"
