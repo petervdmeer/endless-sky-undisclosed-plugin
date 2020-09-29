@@ -1,22 +1,25 @@
 # Author ship for Petervdmeer.
 
-# Ship type: Hauler VI
+# Ship type: Hauler VI (modified)
 # Using regular Hauler engines (and Hauler speeds).
-# No hyperdrive, jumpdrive or keystones (requiring take-off from planet).
-
-
+# Luxurious StarQueen glass type cockpit (able to connect the two sets of pods).
+# Cockpit has firing mechanism at front of each pod.
+# Hyperdrive, jumpdrive and keystones
 
 # Alternatives considered:
 # - Have parts of the Hauler VI detach as separate ships (cockpit as fast attacker with flamethrowers, pods as missile launchers)
 # - Have all parts move at very high speed after separation.
 # - Have a Sheragi cannon built in into the left 3 pods.
+# - Have a Sheragi cannon built into both pod sides (at angle, requiring aiming)
+# - Have an anti-matter cannon built in into one side (or in a pod that splits off as a separate ship).
 # - Installing skylances on the Hauler VI.
+# - No hyperdrive, jumpdrive or keystones (requiring take-off from planet).
 
 # Alternative ships considered (instead of the Hauler VI or possibly as ships flying in formation):
 # - A ship in Hexagonal shape (flat side front)?
 # - A ship in Hexagonal shape (point front), with bays and weapons in 12 directions
 # - Fighter without drives
-# - A ship from ES-Stories (the ES Bactrian looks very nice)
+# - A ship from ES-Stories (the ESS Bactrian looks very nice)
 # - Star Queen Engines variant (possibly flying in formation with the Hauler VI)
 # - Star Queen Carrier variant (possibly flying in formation with the Hauler VI)
 # - Marauder Behemoth
@@ -29,19 +32,18 @@ person "Danau"
 		# Merchant personalities? Personality that uses the built in weapons.
 	phrase
 		word
-			"Check out the stunt pilots flying in formation on Earths Day!"
-			"Watch out for inheritance scams! They take your money but you won't get anything in return."
-			"When jumping into a system with combat, then make sure to arrive at some distance to fire your long-range weapons first!"
 			"When you want to stop your ship, then press shift and back."
+			"The answer is 42."
+			"Your hyperdrive doesn't work? Have you tried turning it off and on again?"
 	phrase
 		word
 			"Don't mess with the Author ships."
 		word
 			" "
 		word
-			"Or do."
 			"I prefer to be left alone."
-			"They can be more dangerous than they look."
+			"Or do."
+			"Such ships can be more dangerous than they look."
 	phrase
 		word
 			"Change the orientation of your"
@@ -73,23 +75,25 @@ person "Danau"
 		word
 			"Arrakis"
 			"Caladan"
-			"Dune"
+			"the Eaxaw"
+			"the Gyisache"
+			"the Happy Birthday"
+			"the Laenfa"
+			"the Muursh"
+			"the Ourbools"
 		word
 			"; "
 		word
-			"do you know where I can find that planet?"
 			"is this the correct game?"
-			"which hyperlane should I take to get there?"
-			"that planet shouldn't be far from here."
 	phrase
 		word
 			"This is a nice ship, "
 		word
-			"and I especially like the custom weapons that I put on it."
+			"and I especially like the custom weapons that I have put on it."
 			"as long as you don't activate the cargo refridgeration systems."
 			"but it didn't get beyond the prototype stage yet."
-			"but it is not for sale on the regular market yet."
-			"but two Hauler IIIs is probably more economical."
+			"but it is not for sale on the regular market."
+			"but using two Hauler IIIs is probably more economical."
 	phrase
 		word
 			"Automate"
@@ -129,30 +133,76 @@ person "Danau"
 			" have more time for good reviews."
 			" have more time for playing the game."
 			" prevent bugs."
-	# Hitchhiker's guide to the galaxy references.
-	# Todo: improve the towel references (or just add towel day into the game).
-	phrase
-		word
-			"Did you bring your towel?"
-	phrase
-		word
-			"The answer is 42."
-			
 	ship "Hauler VI (PTR)" "PTR HVI 42"
 
 
 
-# Very slow ship that uses tractor beam to pull itself towards enemy ships? (beam with hook-type shapes)
-# Second tractor/repulsor beam at short distance?
-# Flamethrowers around the ship? (Or the Welder?)
-# Skylances on the ship?
-
-
+# Long distance hook/beam that pulls a single enemy ship towards the firing ship.
+# Firing ship should have a personality (or weapon) to ensure that the ship stays at long range from the target.
+# Minor damage at long distance. Serious shield piercing damage on short range.
+# Firing ship should have turrets (Skylances?) at short range to deal with the ship being pulled in.
+outfit "Chameleon Tonque"
+	category "Guns"
+	cost 2900000
+	mass 40
+	"outfit space" -40
+	"weapon capacity" -20
+	"gun ports" -1
+	
+	
+	
+# Safe, slowly travelling, phasing weapon that morphs through (formation) patterns.
+# Initial pattern: single bullet
+# Post-fire formation: Splitting into Vee (from very tail to Wing)
+# Pre-collission formation: Vee (from very tail to Wing)
+# Collision-active formation: Wing (1 front, 2 lines of 3)
+# Near-End formation triangle (mid lower split into 2)
+# End-formation: Hexagon (1 center, 6 around), explodes at 7 points.
+# Disabling only-weapon (doesn't damage beyond disabled)
+outfit "Neutralize Cluster"
+	category "Guns"
+	cost 2900000
+	mass 40
+	"outfit space" -40
+	"weapon capacity" -20
+	"gun ports" -1
+	
 
 
 # Long distance grappling hook (distance 6000?). Beam with small hooks on the side.
 # Beam that pulls the firing ship (mostly) and the target ship only minimally.
+# NOTE: not used in favor of Chameleon Tonque
 outfit "Meet and Greet Beam"
+	category "Turrets"
+	cost 2900000
+	#TODO: needs own thumbnail
+	thumbnail "outfit/laser"
+	mass 40
+	"outfit space" -40
+	"weapon capacity" -20
+	"turret mounts" -1
+	weapon
+		sprite "projectile/meet and greet beam"
+			"frame rate" 1
+		#TODO: needs own hardpoint, sounds, hit-effects
+		"hardpoint sprite" "hardpoint/laser turret"
+		"hardpoint offset" -0.5 8.
+		sound "laser"
+		"hit effect" "beam laser impact"
+		"inaccuracy" .01
+		#TODO: slow turn, but is this too slow?
+		"turret turn" 0.2
+		"velocity" 4200
+		#TODO: not continuous?
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 1
+		"firing heat" 1
+		"firing force" 20
+		"hit force" -0.01
+		"shield damage" 0.01
+	description "Beam that pulls the firing ship towards its target."
+	
 
 
 # Normally ships launch projectiles. In this case the projectile launches the ship.
