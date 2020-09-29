@@ -1,5 +1,5 @@
 # This mission should look like just any regular delivery mission (until on-complete).
-mission "Cargo (Rotten)"
+mission "Cargo (Rotten Strawberries)"
 	name "Delivery to <planet>"
 	job
 	repeat
@@ -30,7 +30,7 @@ mission "Cargo (Rotten)"
 # - Some person that has no flight experience asks captain for help.
 mission "Amateur Pilot Landing"
 	to offer
-		has "Cargo (Rotten): done"
+		has "Cargo (Rotten Strawberries): done"
 	destination
 		planet "Calda"
 	on offer
@@ -40,18 +40,46 @@ mission "Amateur Pilot Landing"
 				`"This is <first> <last>, what is the problem?"`
 				`(ignore the message)`
 					decline
-			`"Our pilot ate something bad and is too ill to fly! What should we do???"`
-			`(You remember a remark from your pilot training; a commander can be wrong, but never be indecisive.)`
+			`"Our pilot ate some bad strawberries and is too ill to fly! What should we do???"`
+			`(You remember a remark from your pilot training; a commander can be wrong, but can never be indecisive.)`
 			choice
 				`"I have no idea."`
-				`"Maybe ask around if one of the passengers can fly the ship?"`
-				`"You should read the manual."`
+					goto bad_panic
 				`"There is nothing you can do. The ship will crash."`
+					goto bad_panic
+				`"Ask among the passengers if one of them can fly a ship."`
+					goto ask_around
+				`"Ask among the passengers if there is a doctor onboard."`
+					goto ask_around
+				`"You should read the manual."`
+					goto read_manual
 				`"What trajectory or orbit are you in?"`
 				`"How much will you pay me if I help you?"`
 				`"Which ship are you on?`
 					goto shipname
+			label ask_around
+			`"We already asked, both for doctors and pilots! There are three doctors onboard and they are looking at the pilot."`
+			`	"And there are no other pilots onboard.`
+			`	"We don't need stupid questions! What we need from you is telling us how to land this stupid thing safely!"`
+			choice
+				`"Did you check the hidden pilot sleeping space?"`
+				# Find a second pilot. Everybody happy. Until finding out that this pilot is also ill due to strawberries.
+				
+			
 			label shipname
+			`"Shipname? Euuh, what was it? Ohjeah this is the Star Queen 'Progression'."`
+			choice
+
+				
+				
+				
+
+	
+	
+	
+			
+			
+			
 			`"Ahh, what does it matter???"`
 			`	Away from the microphone "What is the name of this thing?"`
 			`	And back to you "I am aboard the Star Queen 'Progression' and our pilot just got too ill to fly!"`
@@ -76,6 +104,13 @@ mission "Amateur Pilot Landing"
 			`You might want to check the ship as it landed.`
 	on complete
 		conversation
+			`You get redirected to one of the VIP landing platforms. This is either a very good or a very bad sign.`
+			`On landing; the spaceport director walks to your ship. He looks angry`
+			# Tirade on how bad <first> <last> acted.
+			# Then cameras show up.
+		
+		
+		
 			`Some spaceport guy; "great job; forcing the ship to beyond safety limits so that the automated system takes over!"`
 			`"Messing up with the systems that much so that auto-landing had to kick in! You are a genius!"`
 			`Cameras and media are around to congratulate the captain.`
