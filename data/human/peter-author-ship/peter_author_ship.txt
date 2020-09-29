@@ -153,11 +153,11 @@ outfit "Chameleon Tonque"
 	
 # Safe, slowly travelling, phasing weapon that morphs through (formation) patterns.
 # Initial pattern: single bullet
-# Post-fire formation: Splitting into Vee (from very tail to Wing)
-# Pre-collission formation: Vee (from very tail to Wing)
-# Collision-active formation: Wing (1 front, 2 lines of 3)
-# Near-End formation triangle (mid lower split into 2)
-# End-formation: Hexagon (1 center, 6 around), explodes at 7 points.
+# Post-fire pattern: Splitting into Vee (from very tail to Wing)
+# Pre-collission pattern: Vee (from very tail to Wing)
+# Collision-active pattern: Wing (1 front, 2 lines of 3)
+# Near-End pattern: triangle (mid lower split into 2)
+# End-pattern: Hexagon (1 center, 6 around), explodes at 7 points.
 # Disabling only-weapon (doesn't damage beyond disabled)
 outfit "Neutralize Cluster"
 	category "Guns"
