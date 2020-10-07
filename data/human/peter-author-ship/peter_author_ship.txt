@@ -6,7 +6,7 @@
 # Cockpit has firing mechanism at front of each pod.
 # Hyperdrive, jumpdrive and keystones
 
-# Alternatives considered:
+# Alternatives considered (but not chosen):
 # - Have parts of the Hauler VI detach as separate ships (cockpit as fast attacker with flamethrowers, pods as missile launchers)
 # - Have all parts move at very high speed after separation.
 # - Have a Sheragi cannon built in into the left 3 pods.
@@ -29,7 +29,9 @@
 person "Danau"
 	government "Author"
 	personality
-		# Merchant personalities? Personality that uses the built in weapons.
+		# Merchant personalities?
+		# Personality that uses the built in weapons.
+		# Personality that disables
 	phrase
 		word
 			"When you want to stop your ship, then press shift and back."
@@ -137,42 +139,43 @@ person "Danau"
 
 
 
+ship "Hauler VI (PTR)"
+
+
+
 # Long distance hook/beam that pulls a single enemy ship towards the firing ship.
 # Firing ship should have a personality (or weapon) to ensure that the ship stays at long range from the target.
 # Minor damage at long distance. Serious shield piercing damage on short range.
 # Firing ship should have turrets (Skylances?) at short range to deal with the ship being pulled in.
-outfit "Chameleon Tonque"
+outfit "Chameleon Tongue"
 	category "Guns"
 	cost 2900000
 	mass 40
 	"outfit space" -40
 	"weapon capacity" -20
 	"gun ports" -1
-	
-	
-	
-# Safe, slowly travelling, phasing weapon that morphs through (formation) patterns.
-# Initial pattern: single bullet
-# Post-fire pattern: Splitting into Vee (from very tail to Wing)
-# Pre-collission pattern: Vee (from very tail to Wing)
-# Collision-active pattern: Wing (1 front, 2 lines of 3)
-# Near-End pattern: triangle (mid lower split into 2)
-# End-pattern: Hexagon (1 center, 6 around), explodes at 7 points.
-# Disabling only-weapon (doesn't damage beyond disabled)
-outfit "Neutralize Cluster"
-	category "Guns"
-	cost 2900000
-	mass 40
-	"outfit space" -40
-	"weapon capacity" -20
-	"gun ports" -1
-	
+	weapon
+		sprite "projectile/chameleon tongue"
+			"frame rate" 1
+		#TODO: needs own sounds, hit-effects
+		sound "laser"
+		"hit effect" "beam laser impact"
+		"velocity" 4200
+		#TODO: not continuous?
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 1
+		"firing heat" 1
+		"firing force" 0
+		"hit force" -20
+		"shield damage" 0.01
+	description "Long distance hook/beam that pulls the attacked ship towards the firing ship."
+	description "Can be used as towing weapon for friendly ships, or as hostile weapon to isolate enemy ships from their fleet."
 
 
-# Long distance grappling hook (distance 6000?). Beam with small hooks on the side.
-# Beam that pulls the firing ship (mostly) and the target ship only minimally.
-# NOTE: not used in favor of Chameleon Tonque
-outfit "Meet and Greet Beam"
+
+# Needle weapon that is used as a "marker" for a target that is about to be attacked by the Chameleon Tongue
+outfit "Heat Needle"
 	category "Turrets"
 	cost 2900000
 	#TODO: needs own thumbnail
@@ -182,34 +185,80 @@ outfit "Meet and Greet Beam"
 	"weapon capacity" -20
 	"turret mounts" -1
 	weapon
-		sprite "projectile/meet and greet beam"
-			"frame rate" 1
+		# Should be a very thin red beam. (The type of beam you would expect when a sniper is targeting you and using a laser marker.)
+		sprite "projectile/heat needle"
+		#TODO: needs own sounds, hit-effects
+		sound "laser"
+		"hit effect" "beam laser impact"
+		"velocity" 4400
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 1
+		"heat damage" 0.1
+	description "Beam that continuously transfers a tiny amount of heat towards a target ship."
+
+
+
+# Weapon currently not possible in the ES code-base (requires healing weapons and an AI that knows how to use it.)
+# Range is just beyond the Distancers.
+outfit "Healing Beam"
+	category "Turrets"
+	cost 2900000
+	#TODO: needs own thumbnail
+	thumbnail "outfit/laser"
+	mass 40
+	"outfit space" -40
+	"weapon capacity" -20
+	"turret mounts" -1
+	weapon
 		#TODO: needs own hardpoint, sounds, hit-effects
 		"hardpoint sprite" "hardpoint/laser turret"
 		"hardpoint offset" -0.5 8.
-		sound "laser"
-		"hit effect" "beam laser impact"
-		"inaccuracy" .01
-		#TODO: slow turn, but is this too slow?
-		"turret turn" 0.2
-		"velocity" 4200
-		#TODO: not continuous?
+		"velocity" 1500
 		"lifetime" 1
 		"reload" 1
 		"firing energy" 1
 		"firing heat" 1
-		"firing force" 20
-		"hit force" -0.01
-		"shield damage" 0.01
-	description "Beam that pulls the firing ship towards its target."
-	
+	description "Beam that restores hull on friendly ships."
 
 
-# Normally ships launch projectiles. In this case the projectile launches the ship.
-# Enormous firing-hit-force.
-# Projectile travels a short distance.
-# Then it splits into 6 sub-projectiles that are beams with some distance.
-# Then the end of the 6 sub-projectiles (and the core sub projectile) explode.
-# The explosion is disabling, not destroying.
-# Black cloud as explosion?
-outfit "Inverse Launcher"
+
+# Weapon currently not possible in the ES code-base (requires healing weapons, AI that knows how to use it and AI that attacks enemy ships with this.)
+outfit "Preservation Beam"
+	category "Turrets"
+	cost 2900000
+	#TODO: needs own thumbnail
+	thumbnail "outfit/laser"
+	mass 40
+	"outfit space" -40
+	"weapon capacity" -20
+	"turret mounts" -1
+		#TODO: needs own hardpoint, sounds, hit-effects
+		"hardpoint sprite" "hardpoint/laser turret"
+		"hardpoint offset" -0.5 8.
+		"velocity" 600
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 1
+		"firing heat" 1
+	description "Beam that restores shield (fully) and hull to just below disabled on hostile ships."
+
+
+
+# Safe, slowly travelling, phasing weapon that morphs through (formation) patterns.
+# Initial pattern: single bullet
+# Post-fire pattern: Splitting into Vee (from very tail to Wing)
+# Pre-collission pattern: Vee (from very tail to Wing)
+# Collision-active pattern: Wing (1 front, 2 lines of 3)
+# Near-End pattern: triangle (mid lower split into 2)
+# End-pattern: Hexagon (1 center, 6 around), explodes at 7 points (large explosions).
+# Disabling only-weapon (doesn't damage beyond disabled)
+# Range: Needs to be able to cross distancer range before chameleon tongue pulls ship within distancer range.
+outfit "Neutralize Cluster"
+	category "Guns"
+	cost 2900000
+	mass 40
+	"outfit space" -40
+	"weapon capacity" -20
+	"gun ports" -1
+	weapon
