@@ -160,7 +160,7 @@ outfit "Chameleon Tongue"
 		#TODO: needs own sounds, hit-effects
 		sound "laser"
 		"hit effect" "beam laser impact"
-		"velocity" 4200
+		"velocity" 2800
 		#TODO: not continuous?
 		"lifetime" 1
 		"reload" 1
@@ -172,9 +172,33 @@ outfit "Chameleon Tongue"
 	description "Long distance hook/beam that pulls the attacked ship towards the firing ship."
 	description "Can be used as towing weapon for friendly ships, or as hostile weapon to isolate enemy ships from their fleet."
 
+# Weapon in many segments (allows for flexible tongue)
+# Each segment is 50 pixels long
+# Each segment travels 1 frames (very slowly, active homing) and then stops.
+# Total length?? (2200?)
+outfit "Chameleon Flex Tongue"
+	category "Guns"
+	cost 2900000
+	mass 40
+	"outfit space" -40
+	"weapon capacity" -20
+	"gun ports" -1
+
+
+
+# Turret version?
+outfit "Chameleon Tongue Turret"
+
+
 
 
 # Needle weapon that is used as a "marker" for a target that is about to be attacked by the Chameleon Tongue
+#
+# Possible alternative names (to differentiate from Clusters)
+# - Overclocked Heat Needle?
+# - Focussed Heat Needle
+#
+# Or just use clusterers version?
 outfit "Heat Needle"
 	category "Turrets"
 	cost 2900000
