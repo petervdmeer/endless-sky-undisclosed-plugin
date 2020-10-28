@@ -2,9 +2,9 @@
 
 # Ship type: Hauler VI (modified)
 # Using regular Hauler engines (and Hauler speeds).
-# Luxurious StarQueen glass type cockpit (able to connect the two sets of pods).
-# Cockpit has firing mechanism at front of each pod.
-# Hyperdrive, jumpdrive and keystones
+# Luxurious StarQueen glass type cockpit.
+# Left side of ship is fully dedicated to the chameleon tongue weapon.
+# Hyperdrive, jumpdrive and keystones.
 
 # Alternatives considered (but not chosen):
 # - Have parts of the Hauler VI detach as separate ships (cockpit as fast attacker with flamethrowers, pods as missile launchers)
@@ -194,11 +194,12 @@ outfit "Chameleon Tongue Turret"
 
 # Needle weapon that is used as a "marker" for a target that is about to be attacked by the Chameleon Tongue
 #
-# Possible alternative names (to differentiate from Clusters)
+# Possible alternative names (to differentiate from Clusterers version)
 # - Overclocked Heat Needle?
 # - Focussed Heat Needle
 #
 # Or just use clusterers version?
+#
 outfit "Heat Needle"
 	category "Turrets"
 	cost 2900000
@@ -214,7 +215,7 @@ outfit "Heat Needle"
 		#TODO: needs own sounds, hit-effects
 		sound "laser"
 		"hit effect" "beam laser impact"
-		"velocity" 4400
+		"velocity" 2200
 		"lifetime" 1
 		"reload" 1
 		"firing energy" 1
