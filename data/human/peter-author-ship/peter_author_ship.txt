@@ -35,7 +35,6 @@ person "Danau"
 	phrase
 		word
 			"When you want to stop your ship, then press shift and back."
-			"The answer is 42."
 			"Your hyperdrive doesn't work? Have you tried turning it off and on again?"
 	phrase
 		word
@@ -135,6 +134,7 @@ person "Danau"
 			" have more time for good reviews."
 			" have more time for playing the game."
 			" prevent bugs."
+
 	ship "Hauler VI (PTR)" "PTR HVI 42"
 
 
