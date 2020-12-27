@@ -140,6 +140,94 @@ person "Danau"
 
 
 ship "Hauler VI (PTR)"
+	# Heat Needle mount.
+	turret 48 -124
+	# Spinal mount cannon.
+	gun -48 -96
+	turret -94 -66
+	turret 0 -66
+	turret 94 -66
+	turret 94 8
+	turret 0 8
+	turret -94 8
+	turret -94 82
+	turret 0 82
+	turret 94 82
+	turret 94 82
+	turret 66 162
+	turret 28 162
+	turret -28 162
+	turret -66 162
+	# Guns on front of cockpit.
+	gun 48 -208
+	gun 38 -196
+	gun 58 -196
+	gun 28 -174
+	gun 68 -174
+	# Upper docking; on the middle of the pod(s).
+	# For now Fighters, maybe Interceptors (or Headhunters) in the future?
+	bay Fighter -48 -56
+		over
+	bay Fighter 48 -56
+		over
+	bay Fighter -48 18
+		over
+	bay Fighter 48 18
+		over
+	bay Fighter -48 92
+		over
+	bay Fighter 48 92
+		over
+	# Lower docking on arms; Fighters? / Interceptors?
+	bay Fighter -94 -50
+		under
+	bay Fighter 0 -50
+		under
+	bay Fighter 94 -50
+		under
+	bay Fighter 94 28
+		under
+	bay Fighter 0 28
+		under
+	bay Fighter -94 28
+		under
+	bay Fighter -94 100
+		angle -180
+		under
+	bay Fighter 0 100
+		angle -180
+		under
+	bay Fighter 94 100
+		angle -180
+		under
+	# Belly docking (cockpit)
+	bay Fighter 48 -136
+		under
+	# Belly docking (pods); Drones? / Fighters?
+	bay Fighter -48 -56
+		under
+	bay Fighter 48 -56
+		under
+	bay Fighter -48 18
+		under
+	bay Fighter 48 18
+		under
+	bay Fighter -48 92
+		angle -180
+		under
+	bay Fighter 48 92
+		angle -180
+		under
+	# Belly docking (engines)
+	bay Fighter -48 162
+		angle -180
+		under
+	bay Fighter 48 162
+		angle -180
+		under
+	engine -92 206
+	engine 0 206
+	engine 92 206
 
 
 
