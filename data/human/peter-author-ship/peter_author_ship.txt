@@ -139,6 +139,7 @@ person "Danau"
 
 
 
+# TODO: add something in the right pods (maybe some drones per pod?)
 ship "Hauler VI (PTR)"
 	# Heat Needle mount.
 	turret 48 -124
