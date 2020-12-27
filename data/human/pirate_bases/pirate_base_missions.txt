@@ -26,7 +26,7 @@ fleet "Pirate base fleet (Butcher)"
 		"Finch (Alien-Mixed Fast Inhibitor)" 18
 		"Finch (Alien-Mixed Fast Flamethrower)" 4
 		"Fighter Shuttle" 2
-		"Far Lek 14 (Alien-mixed Flamethrower)" 8
+		"Far Lek 14 (Alien-Mixed Flamethrower)" 8
 		"Flea (Alien-Mixed Fast Blaster)" 3
 		"Flycatcher (Alien-Mixed Fast Laser Turret)" 5
 		"Marauder Behemoth (Engines)" 2

@@ -220,6 +220,7 @@ outfit "Heat Needle"
 		"reload" 1
 		"firing energy" 1
 		"heat damage" 0.1
+		"turret turn" 1.4
 	description "Beam that continuously transfers a tiny amount of heat towards a target ship."
 
 
@@ -244,6 +245,7 @@ outfit "Healing Beam"
 		"reload" 1
 		"firing energy" 1
 		"firing heat" 1
+		"turret turn" 1.4
 	description "Beam that restores hull on friendly ships."
 
 
@@ -258,6 +260,7 @@ outfit "Preservation Beam"
 	"outfit space" -40
 	"weapon capacity" -20
 	"turret mounts" -1
+	weapon
 		#TODO: needs own hardpoint, sounds, hit-effects
 		"hardpoint sprite" "hardpoint/laser turret"
 		"hardpoint offset" -0.5 8.
@@ -266,6 +269,7 @@ outfit "Preservation Beam"
 		"reload" 1
 		"firing energy" 1
 		"firing heat" 1
+		"turret turn" 1.4
 	description "Beam that restores shield (fully) and hull to just below disabled on hostile ships."
 
 

@@ -77,9 +77,9 @@ ship Flea "Flea (Alien-Mixed Fast Blaster)"
 		"Small Steering Module"
 		"Small Biochemical Cell"
 		"Cooling Ducts"
-		"Modified Blaster"
-		"Crucible-Class Thruster"
-	gun "Modified Blaster"
+		"Energy Blaster"
+		"Thruster (Asteroid Class)"
+	gun "Energy Blaster"
 
 
 

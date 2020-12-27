@@ -1,6 +1,6 @@
 ship "Fighter Shuttle"
 	plural "Fighter Shuttles"
-	sprite "ship/fighter_shuttle"
+	sprite "ship/shuttle"
 		"frame rate" 15
 		delay 14
 		"random start frame"
@@ -44,7 +44,7 @@ ship "Fighter Shuttle"
 
 ship "Fighter Shuttle" "Fighter Shuttle (alien)"
 	plural "Fighter Shuttles"
-	sprite "ship/fighter_shuttle"
+	sprite "ship/shuttle"
 		"frame rate" 15
 		delay 14
 		"random start frame"
