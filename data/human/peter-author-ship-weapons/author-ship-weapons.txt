@@ -1,0 +1,132 @@
+# Long distance hook/beam that pulls a single enemy ship towards the firing ship.
+# Firing ship should have a personality (or weapon) to ensure that the ship stays at long range from the target.
+# Minor damage at long distance. Serious shield piercing damage on short range.
+# Firing ship should have turrets (Skylances?) at short range to deal with the ship being pulled in.
+outfit "Chameleon Tongue"
+	category "Guns"
+	cost 2900000
+	mass 40
+	"outfit space" -40
+	"weapon capacity" -20
+	"gun ports" -1
+	"spinal mount" -1
+	"clusterers colony" -300
+	"required crew" 20
+	weapon
+		sprite "projectile/chameleon tongue"
+			"frame rate" 1
+		#TODO: needs own sounds, hit-effects
+		sound "laser"
+		"hit effect" "beam laser impact"
+		"velocity" 2800
+		#TODO: not continuous?
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 1
+		"firing heat" 1
+		"firing force" 0
+		"hit force" -20
+		"shield damage" 0.01
+	description "Long distance hook/beam that pulls the attacked ship towards the firing ship."
+	description "Can be used as towing weapon for friendly ships, or as hostile weapon to isolate enemy ships from their fleet."
+
+# Weapon in many segments (allows for flexible tongue)
+# Each segment is 50 pixels long
+# Each segment travels 1 frames (very slowly, active homing) and then stops.
+# Total length?? (2200?)
+outfit "Chameleon Flex Tongue"
+	category "Guns"
+	cost 2900000
+	mass 40
+	"outfit space" -40
+	"weapon capacity" -20
+	"gun ports" -1
+
+
+
+# Turret version?
+outfit "Chameleon Tongue Turret"
+
+
+
+
+# Needle weapon that is used as a "marker" for a target that is about to be attacked by the Chameleon Tongue
+#
+# Possible alternative names (to differentiate from Clusterers version)
+# - Overclocked Heat Needle?
+# - Focussed Heat Needle
+#
+# Or just use clusterers version?
+#
+outfit "Heat Needle"
+	category "Turrets"
+	cost 2900000
+	#TODO: needs own thumbnail
+	thumbnail "outfit/laser"
+	mass 40
+	"outfit space" -40
+	"weapon capacity" -20
+	"turret mounts" -1
+	"clusterers colony" 10
+	weapon
+		# Should be a very thin red beam. (The type of beam you would expect when a sniper is targeting you and using a laser marker.)
+		sprite "projectile/heat needle"
+		#TODO: needs own sounds, hit-effects
+		sound "laser"
+		"hit effect" "beam laser impact"
+		"velocity" 2200
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 1
+		"heat damage" 0.1
+		"turret turn" 1.4
+	description "Beam that continuously transfers a tiny amount of heat towards a target ship."
+
+
+
+# Weapon currently not possible in the ES code-base (requires healing weapons and an AI that knows how to use it.)
+# Range is just beyond the Distancers.
+outfit "Healing Beam"
+	category "Turrets"
+	cost 2900000
+	#TODO: needs own thumbnail
+	thumbnail "outfit/laser"
+	mass 40
+	"outfit space" -40
+	"weapon capacity" -20
+	"turret mounts" -1
+	weapon
+		#TODO: needs own hardpoint, sounds, hit-effects
+		"hardpoint sprite" "hardpoint/laser turret"
+		"hardpoint offset" -0.5 8.
+		"velocity" 1500
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 1
+		"firing heat" 1
+		"turret turn" 1.4
+	description "Beam that restores hull on friendly ships."
+
+
+
+# Weapon currently not possible in the ES code-base (requires healing weapons, AI that knows how to use it and AI that attacks enemy ships with this.)
+outfit "Preservation Beam"
+	category "Turrets"
+	cost 2900000
+	#TODO: needs own thumbnail
+	thumbnail "outfit/laser"
+	mass 40
+	"outfit space" -40
+	"weapon capacity" -20
+	"turret mounts" -1
+	weapon
+		#TODO: needs own hardpoint, sounds, hit-effects
+		"hardpoint sprite" "hardpoint/laser turret"
+		"hardpoint offset" -0.5 8.
+		"velocity" 600
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 1
+		"firing heat" 1
+		"turret turn" 1.4
+	description "Beam that restores shield (fully) and hull to just below disabled on hostile ships."
