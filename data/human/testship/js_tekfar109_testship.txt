@@ -34,6 +34,7 @@ ship "JS Tek Far"
 		"outfit space" 6275
 		shields 22400
 		"tactical scan power" 32
+		"spinal mount" 1
 		"sidewinder capacity" 6000
 		"tracker capacity" 6000
 		"turret mounts" 12
