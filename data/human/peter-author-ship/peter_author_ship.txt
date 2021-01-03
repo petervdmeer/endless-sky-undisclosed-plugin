@@ -136,50 +136,93 @@ person "Danau"
 			" prevent bugs."
 
 	ship "Hauler VI (PTR)" "PTR HVI 42"
+	ship "Finch (Alien-Mixed Fast Inhibitor)" 9
+	ship "Finch (Alien-Mixed Fast Flamethrower)" 9
 
 
 
 # TODO: add something in the right pods (maybe some drones per pod?)
 ship "Hauler VI (PTR)"
+	sprite "ships/human/hauler ptr hvi"
+	"never disabled"
+	attributes
+		category "Heavy Warship"
+		cost 35890000
+		hull 75400
+		shields 22400
+		"fuel capacity" 800
+		"outfit space" 2465
+		"weapon capacity" 933
+		"engine capacity" 158
+		"required crew" 3
+		"bunks" 44
+		"mass" 470
+		"drag" 12.5
+		"cargo space" 780
+		"cargo scan power" 9
+		"cargo scan speed" 1
+		"outfit scan power" 25
+		"outfit scan speed" 1
+		"tactical scan power" 32
+		"heat dissipation" .8
+		"spinal mount" 1
+		"clusterers colony" 400
+		"sidewinder capacity" 6000
+		"tracker capacity" 6000
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		"Jump Drive"
+		"Scram Drive"
+		"Quantum Keystone"
+		"Large Heat Shunt" 3
+		"Thruster (Planetary Class)"
+		"Steering (Stellar Class)"
+		"Tier 3 Anti-Missile"
+		"Sheragi Anti-Missile"
+		"Korath Grab-Strike"
+		"Systems Core (Large)" 3
+		"Fuel Processor" 8
+		"Luxury Accommodations"
+		"Cloaking Device"
+		"Overclocked Repair Module" 11
+		"Large Battery Module" 5
+		"Heliarch Attractor"
+		"Korath Detainer" 2
+		"Korath Disruptor" 2
+		"Antimatter Core" 5
+		"Dragonflame Cannon"
+		"Quarg Skylance" 5
+		"Hai Tracker Pod" 2
+		"Hai Tracker" 6112
+		"Sidewinder Missile Launcher"
+		"Sidewinder Missile" 6045
 	# Heat Needle mount.
-	turret 48 -124
+	turret 48 -124 "Korath Grab-Strike"
 	# Spinal mount cannon.
-	gun -48 -96
-	turret -94 -66
-	turret 0 -66
-	turret 94 -66
-	turret 94 8
-	turret 0 8
-	turret -94 8
-	turret -94 82
-	turret 0 82
-	turret 94 82
-	turret 94 82
-	turret 66 162
-	turret 28 162
-	turret -28 162
-	turret -66 162
+	gun -48 -96 "Dragonflame Cannon"
+	# Turrets on top of pods
+	turret -48 -56 "Heliarch Attractor"
+	turret 48 -56 "Quarg Skylance"
+	turret -48 18 "Quarg Skylance"
+	turret 48 18 "Quarg Skylance"
+	turret -48 92 "Korath Disruptor"
+	turret 48 92 "Korath Disruptor"
+	# Rear turrets (on engine section)
+	turret 66 162 "Quarg Skylance"
+	turret 28 162 "Tier 3 Anti-Missile"
+	turret -28 162 "Sheragi Anti-Missile"
+	turret -66 162 "Quarg Skylance"
 	# Guns on front of cockpit.
-	gun 48 -208
-	gun 38 -196
-	gun 58 -196
-	gun 28 -174
-	gun 68 -174
-	# Upper docking; on the middle of the pod(s).
-	# For now Fighters, maybe Interceptors (or Headhunters) in the future?
-	bay Fighter -48 -56
-		over
-	bay Fighter 48 -56
-		over
-	bay Fighter -48 18
-		over
-	bay Fighter 48 18
-		over
-	bay Fighter -48 92
-		over
-	bay Fighter 48 92
-		over
-	# Lower docking on arms; Fighters? / Interceptors?
+	gun 48 -208 "Sidewinder Missile Launcher"
+	gun 38 -196 "Hai Tracker Pod"
+	gun 58 -196 "Hai Tracker Pod"
+	gun 28 -174 "Korath Detainer"
+	gun 68 -174 "Korath Detainer"
+	# Docking on arms
 	bay Fighter -94 -50
 		under
 	bay Fighter 0 -50
@@ -243,6 +286,9 @@ outfit "Chameleon Tongue"
 	"outfit space" -40
 	"weapon capacity" -20
 	"gun ports" -1
+	"spinal mount" -1
+	"clusterers colony" -300
+	"required crew" 20
 	weapon
 		sprite "projectile/chameleon tongue"
 			"frame rate" 1
@@ -298,6 +344,7 @@ outfit "Heat Needle"
 	"outfit space" -40
 	"weapon capacity" -20
 	"turret mounts" -1
+	"clusterers colony" 10
 	weapon
 		# Should be a very thin red beam. (The type of beam you would expect when a sniper is targeting you and using a laser marker.)
 		sprite "projectile/heat needle"
@@ -380,3 +427,9 @@ outfit "Neutralize Cluster"
 	"weapon capacity" -20
 	"gun ports" -1
 	weapon
+
+
+
+# Make the ship available for testing
+shipyard "Basic Ships"
+	"Hauler VI (PTR)"
