@@ -27,14 +27,14 @@ ship "Finch" "Finch (Alien-Mixed Fast Flamethrower)"
 		"Fuel Pod"
 		Flamethrower
 		"Millennium Cell"
-		#"Emergency Ramscoop"
+		"Emergency Ramscoop"
 	gun
 	gun Flamethrower
 
 
 
 #JSf assault8, medium speed bombardment cannon equipped fighter, speed ~800
-ship "Finch" "Finch (Alien-Mixed Bombarder"
+ship "Finch" "Finch (Alien-Mixed Bombarder)"
 	outfits
 		"Systems Core (Small)"
 		"Small Heat Shunt"
@@ -43,18 +43,8 @@ ship "Finch" "Finch (Alien-Mixed Bombarder"
 		"Bombardment Cannon"
 		"Small Battery Module"
 		"Millennium Cell"
-	crew 1
-	fuel 0
-	shields 1100
-	hull 200
-	position -11.814907 3.9882459
-	engine -5 32 1
-	engine 5 32 1
-	gun -7 -14 "Bombardment Cannon"
-	gun 7 -14
-	leak flame 60 80
-	explode "tiny explosion" 15
-	explode "small explosion" 5
+	gun "Bombardment Cannon"
+	gun
 
 
 
@@ -97,9 +87,9 @@ ship Flycatcher "Flycatcher (Alien-Mixed Fast Laser Turret)"
 
 
 # For debugging/testing
-#shipyard "Basic Ships"
-#	"Finch (Alien-Mixed Fast Inhibitor)"
-#	"Finch (Alien-Mixed Fast Flamethrower)"
-#	"Far Lek 14 (Alien-Mixed Flamethrower)"
-#	"Flea (Alien-Mixed Fast Blaster)"
-#	"Flycatcher (Alien-Mixed Fast Laser Turret)"
+shipyard "Basic Ships"
+	"Finch (Alien-Mixed Fast Inhibitor)"
+	"Finch (Alien-Mixed Fast Flamethrower)"
+	"Far Lek 14 (Alien-Mixed Flamethrower)"
+	"Flea (Alien-Mixed Fast Blaster)"
+	"Flycatcher (Alien-Mixed Fast Laser Turret)"
