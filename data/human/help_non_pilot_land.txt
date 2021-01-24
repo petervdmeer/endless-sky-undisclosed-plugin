@@ -64,25 +64,14 @@ mission "Amateur Pilot Landing"
 			choice
 				`"Did you check the hidden pilot sleeping space?"`
 				# Find a second pilot. Everybody happy. Until finding out that this pilot is also ill due to strawberries.
-				
-			
 			label shipname
 			`"Shipname? Euuh, what was it? Ohjeah this is the Star Queen 'Progression'."`
-			choice
-
-				
-				
-				
-
-	
-	
-	
-			
-			
-			
 			`"Ahh, what does it matter???"`
 			`	Away from the microphone "What is the name of this thing?"`
 			`	And back to you "I am aboard the Star Queen 'Progression' and our pilot just got too ill to fly!"`
+			choice
+				"Sorry, I don't help Star Queens."
+					decline
 			# Should I press MTC (Master Trajectory Correction - Manual Trajectory Correction)?
 			# Should I press ATC (Automatic Trajectory Correction - Abort Trajectory Correction)?
 			"A button with ATC just started blinking should I press it?"
@@ -96,6 +85,10 @@ mission "Amateur Pilot Landing"
 			`The ship starts spinning more intensivey and begins a nosedive straight towards the ground.`
 			# Bad outcome: if the player asked for a lot of money...
 			# Bad outcome: if the player was indecisive...
+			label read_manual
+			`Voices are getting more and more panicing; where is the manual? Does this ship even have it?`
+			label bad_panic
+			`You hear panic throughout the ship, there are no further responses to your hails.`
 			label bad_outcome
 			`The ship crashes into a densely populated residental area. This is probably going to give a lot of trouble.`
 			fail
@@ -108,9 +101,6 @@ mission "Amateur Pilot Landing"
 			`On landing; the spaceport director walks to your ship. He looks angry`
 			# Tirade on how bad <first> <last> acted.
 			# Then cameras show up.
-		
-		
-		
 			`Some spaceport guy; "great job; forcing the ship to beyond safety limits so that the automated system takes over!"`
 			`"Messing up with the systems that much so that auto-landing had to kick in! You are a genius!"`
 			`Cameras and media are around to congratulate the captain.`
