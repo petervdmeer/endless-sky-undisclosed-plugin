@@ -1,4 +1,4 @@
-ship "Pirate Base" "Pirate Base Tropical"
+ship "Pirate Base Tropical"
 	sprite "ships/human/pirate_base_tropical"
 	plural "Pirate Bases"
 	attributes

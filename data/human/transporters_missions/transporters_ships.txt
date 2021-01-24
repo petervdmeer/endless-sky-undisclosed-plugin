@@ -1,6 +1,7 @@
 # Haulers numbering is based on the amount of containers, so with six containers we call this one the Hauler VI.
 ship "Hauler VI prototype"
-	sprite "ships/human/hauler vi prototype"
+	sprite "ships/human/hauler vi"
+	#sprite "ships/human/hauler vi prototype"
 	thumbnail "thumbnail/hauler iii"
 	attributes
 		category "Heavy Freighter"

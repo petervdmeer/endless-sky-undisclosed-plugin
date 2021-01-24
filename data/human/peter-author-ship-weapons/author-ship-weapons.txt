@@ -13,8 +13,8 @@ outfit "Chameleon Tongue"
 	"clusterers colony" -300
 	"required crew" 20
 	weapon
-		sprite "projectile/chameleon tongue"
-			"frame rate" 1
+		#sprite "projectile/chameleon tongue"
+		#	"frame rate" 1
 		#TODO: needs own sounds, hit-effects
 		sound "laser"
 		"hit effect" "beam laser impact"
@@ -70,7 +70,7 @@ outfit "Heat Needle"
 	"clusterers colony" 10
 	weapon
 		# Should be a very thin red beam. (The type of beam you would expect when a sniper is targeting you and using a laser marker.)
-		sprite "projectile/heat needle"
+		#sprite "projectile/heat needle"
 		#TODO: needs own sounds, hit-effects
 		sound "laser"
 		"hit effect" "beam laser impact"

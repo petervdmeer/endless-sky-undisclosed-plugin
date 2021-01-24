@@ -1,7 +1,7 @@
 outfit "Rock launcher"
 	category "Guns"
 	cost 140000
-	thumbnail "outfit/rock launcher"
+	#thumbnail "outfit/rock launcher"
 	mass 90
 	"outfit space" -90
 	"weapon capacity" -90
@@ -38,7 +38,7 @@ outfit "Rock launcher"
 outfit "Heat Needle"
 	category "Turrets"
 	cost 140000
-	thumbnail "outfit/heat needle"
+	#thumbnail "outfit/heat needle"
 	mass 90
 	"outfit space" -90
 	"weapon capacity" -90
@@ -70,7 +70,7 @@ outfit "Heat Needle"
 outfit "Heat Pocketizer"
 	category "Turrets"
 	cost 140000
-	thumbnail "outfit/heat pocketizer"
+	#thumbnail "outfit/heat pocketizer"
 	mass 90
 	"outfit space" -90
 	"weapon capacity" -90
