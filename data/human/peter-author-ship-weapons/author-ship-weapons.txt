@@ -15,7 +15,7 @@ outfit "Chameleon Tongue"
 	"required crew" 20
 	weapon
 		sprite "projectile/chameleon_tongue"
-			"frame rate" 1
+			"frame rate" 15
 		#TODO: needs own sounds, hit-effects
 		sound "laser"
 		"hit effect" "beam laser impact"
