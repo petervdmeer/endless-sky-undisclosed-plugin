@@ -27,9 +27,11 @@
 person "Danau"
 	government "Author"
 	personality
-		# Merchant personalities?
-		# Personality that uses the built in weapons.
-		# Personality that disables
+		heroic
+		disables
+		unconstrained
+		opportunistic
+		# Merchant personalities? Staying at distance?
 	phrase
 		word
 			"When you want to stop your ship, then press shift and back."
