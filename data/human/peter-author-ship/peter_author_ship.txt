@@ -200,7 +200,9 @@ ship "Hauler VI (PTR)"
 	# Heat Needle mount.
 	turret 48 -124 "Korath Grab-Strike"
 	# Spinal mount cannon.
-	gun -48 -96 "Dragonflame Cannon"
+	gun -48 -128 "Dragonflame Cannon"
+	# Turret location in case of Chameleon tongue weapon
+	#turret -49 -120
 	# Turrets on top of pods
 	turret -48 -56 "Heliarch Attractor"
 	turret 48 -56 "Quarg Skylance"
