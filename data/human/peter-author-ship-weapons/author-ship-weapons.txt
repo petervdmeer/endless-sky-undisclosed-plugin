@@ -25,7 +25,7 @@ outfit "Chameleon Tongue"
 		"firing energy" 16
 		"firing heat" 40
 		"firing force" 0
-		"hit force" -20
+		"hit force" -40
 		"shield damage" 0.01
 	description "Long distance hook that pulls the attacked ship towards the firing ship."
 	description "Can be used as towing weapon for friendly ships, or as hostile weapon to isolate enemy ships from their fleet."
@@ -59,7 +59,7 @@ outfit "Heat Needle"
 		#TODO: needs own sounds, hit-effects
 		sound "laser"
 		"hit effect" "beam laser impact"
-		"velocity" 2200
+		"velocity" 2850
 		"lifetime" 1
 		"reload" 1
 		"firing energy" 1
