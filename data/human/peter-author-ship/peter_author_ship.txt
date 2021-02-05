@@ -188,21 +188,15 @@ ship "Hauler VI (PTR)"
 		"Overclocked Repair Module" 11
 		"Large Battery Module" 5
 		"Heliarch Attractor"
-		"Korath Detainer" 2
+		"Pug Seeker" 5
 		"Korath Disruptor" 2
 		"Antimatter Core" 5
-		"Dragonflame Cannon"
+		"Chameleon Tongue" 1
 		"Quarg Skylance" 5
-		"Hai Tracker Pod" 2
-		"Hai Tracker" 6112
-		"Sidewinder Missile Launcher"
-		"Sidewinder Missile" 6045
 	# Heat Needle mount.
 	turret 48 -124 "Korath Grab-Strike"
-	# Spinal mount cannon.
-	gun -48 -128 "Dragonflame Cannon"
-	# Turret location in case of Chameleon tongue weapon
-	#turret -49 -120
+	# Spinal mount cannon. (alternative: "Dragonflame Cannon")
+	gun -48 -128 "Chameleon Tongue"
 	# Turrets on top of pods
 	turret -48 -56 "Heliarch Attractor"
 	turret 48 -56 "Quarg Skylance"
@@ -216,11 +210,11 @@ ship "Hauler VI (PTR)"
 	turret -28 162 "Sheragi Anti-Missile"
 	turret -66 162 "Quarg Skylance"
 	# Guns on front of cockpit.
-	gun 48 -208 "Sidewinder Missile Launcher"
-	gun 38 -196 "Hai Tracker Pod"
-	gun 58 -196 "Hai Tracker Pod"
-	gun 28 -174 "Korath Detainer"
-	gun 68 -174 "Korath Detainer"
+	gun 48 -208 "Pug Seeker"
+	gun 38 -196 "Pug Seeker"
+	gun 58 -196 "Pug Seeker"
+	gun 28 -174 "Pug Seeker"
+	gun 68 -174 "Pug Seeker"
 	# Docking on arms
 	bay Fighter -94 -50
 		under
@@ -277,3 +271,5 @@ ship "Hauler VI (PTR)"
 # Make the ship available for testing
 shipyard "Basic Ships"
 	"Hauler VI (PTR)"
+	"Finch (Alien-Mixed Fast Inhibitor)"
+	"Finch (Alien-Mixed Fast Flamethrower)"

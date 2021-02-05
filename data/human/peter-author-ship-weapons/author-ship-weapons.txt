@@ -1,51 +1,36 @@
 # Long distance hook/beam that pulls a single enemy ship towards the firing ship.
 # Firing ship should have a personality (or weapon) to ensure that the ship stays at long range from the target.
 # Minor damage at long distance. Serious shield piercing damage on short range.
-# Firing ship should have turrets (Skylances?) at short range to deal with the ship being pulled in.
+# Considered turretted version and segmented version, but the beam version seems to give least undesired visual artifacts.
 outfit "Chameleon Tongue"
 	category "Guns"
-	cost 2900000
+	cost 290000000
+	thumbnail "outfit/dragonflame"
 	mass 40
 	"outfit space" -40
-	"weapon capacity" -20
+	"weapon capacity" -40
 	"gun ports" -1
 	"spinal mount" -1
 	"clusterers colony" -300
 	"required crew" 20
 	weapon
-		#sprite "projectile/chameleon tongue"
-		#	"frame rate" 1
+		sprite "projectile/chameleon_tongue"
+			"frame rate" 1
 		#TODO: needs own sounds, hit-effects
 		sound "laser"
 		"hit effect" "beam laser impact"
 		"velocity" 2800
-		#TODO: not continuous?
 		"lifetime" 1
 		"reload" 1
-		"firing energy" 1
-		"firing heat" 1
+		"firing energy" 16
+		"firing heat" 40
 		"firing force" 0
 		"hit force" -20
 		"shield damage" 0.01
-	description "Long distance hook/beam that pulls the attacked ship towards the firing ship."
+	description "Long distance hook that pulls the attacked ship towards the firing ship."
 	description "Can be used as towing weapon for friendly ships, or as hostile weapon to isolate enemy ships from their fleet."
-
-# Weapon in many segments (allows for flexible tongue)
-# Each segment is 50 pixels long
-# Each segment travels 1 frames (very slowly, active homing) and then stops.
-# Total length?? (2200?)
-outfit "Chameleon Flex Tongue"
-	category "Guns"
-	cost 2900000
-	mass 40
-	"outfit space" -40
-	"weapon capacity" -20
-	"gun ports" -1
-
-
-
-# Turret version?
-outfit "Chameleon Tongue Turret"
+	description "The hooking system seriously distrupts shield effectivity at short range."
+	description "This weapon is typically combined with short-range push-turrets and short-range high damage turrets."
 
 
 
