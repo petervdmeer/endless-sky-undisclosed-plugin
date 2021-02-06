@@ -197,6 +197,7 @@ ship "Hauler VI (PTR)"
 		"Quarg Skylance" 4
 	# Heat Needle mount.
 	turret 48 -124 "Korath Grab-Strike"
+	#TODO: add a (light version of the) drak distancer to let the Chameleon Tongue work best?
 	# Spinal mount cannon. (alternative: "Dragonflame Cannon")
 	gun -48 -128 "Chameleon Tongue"
 	# Turrets on top of pods
