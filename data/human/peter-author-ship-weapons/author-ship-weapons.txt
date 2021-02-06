@@ -1,6 +1,4 @@
-# Long distance hook/beam that pulls a single enemy ship towards the firing ship.
 # Firing ship should have a personality (or weapon) to ensure that the ship stays at long range from the target.
-# Minor damage at long distance. Serious shield piercing damage on short range.
 # Considered turretted version and segmented version, but the beam version seems to give least undesired visual artifacts.
 outfit "Chameleon Tongue"
 	category "Guns"
@@ -25,11 +23,15 @@ outfit "Chameleon Tongue"
 		"firing energy" 16
 		"firing heat" 40
 		"firing force" 0
-		"hit force" -40
+		# Don't grab any ships/items inbetween
+		phasing
+		# Pull strongly at a long distance, but reduce pull very close to the ship.
+		"damage dropoff" 300 600
+		"dropoff modifier" 120.
+		"hit force" -1
 		"shield damage" 0.01
-	description "Long distance hook that pulls the attacked ship towards the firing ship."
+	description "Long distance hook that pulls the attacked ship towards just in front of the firing ship."
 	description "Can be used as towing weapon for friendly ships, or as hostile weapon to isolate enemy ships from their fleet."
-	description "The hooking system seriously distrupts shield effectivity at short range."
 	description "This weapon is typically combined with short-range push-turrets and short-range high damage turrets."
 
 
