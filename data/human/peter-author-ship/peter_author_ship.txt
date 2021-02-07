@@ -183,7 +183,7 @@ ship "Hauler VI (PTR)"
 		"Tier 3 Anti-Missile"
 		"Sheragi Anti-Missile"
 		"Korath Grab-Strike"
-		"Korath Banisher" 2
+		"Korath Banisher" 4
 		"Systems Core (Large)" 3
 		"Fuel Processor" 8
 		"Luxury Accommodations"
@@ -195,11 +195,28 @@ ship "Hauler VI (PTR)"
 		"Antimatter Core" 4
 		"Chameleon Tongue" 1
 		"Quarg Skylance" 4
-	# Heat Needle mount.
-	turret 48 -124 "Korath Grab-Strike"
-	#TODO: add a (light version of the) drak distancer to let the Chameleon Tongue work best?
+		"Drak Distancer" 1
+	# Guns on front of cockpit.
+	# Inhibitor cannons? Particle cannons? Other push-back weapons?
+	gun -28 -174
+	gun -68 -174
+	# Turret on cockpit front: Heat Needle mount.
+	# The attractor compensates for the Banishers
+	turret -48 -124 "Korath Grab-Strike"
+	turret -48 -104 "Heliarch Attractor"
 	# Spinal mount cannon. (alternative: "Dragonflame Cannon")
-	gun -48 -128 "Chameleon Tongue"
+	gun 48 -128 "Chameleon Tongue"
+	# Guns on front fighter docks
+	gun -98 -94
+	gun 4 -94
+	gun 90 -94
+	# Turret on outer side of left of spinal cannon
+	#turret 92 -60
+	# Turrets on middle fighter bay mounts
+	# The Drak Distancer makes the Chameleon Tongue work better
+	turret 0 -60 "Sheragi Anti-Missile"
+	turret 0 14 "Drak Distancer"
+	turret 0 86 "Tier 3 Anti-Missile"
 	# Turrets on top of pods
 	turret -48 -56 "Quarg Skylance"
 	turret 48 -56 "Quarg Skylance"
@@ -208,17 +225,10 @@ ship "Hauler VI (PTR)"
 	turret -48 92 "Korath Disruptor"
 	turret 48 92 "Korath Disruptor"
 	# Rear turrets (on engine section)
-	turret 66 162 "Sheragi Anti-Missile"
-	turret 28 162 "Tier 3 Anti-Missile"
-	turret -28 162 "Korath Banisher"
+	turret 66 162 "Korath Banisher"
+	turret 28 162 "Korath Banisher"
 	turret -66 162 "Korath Banisher"
-	# Guns on front of cockpit.
-	# Inhibitor cannons? Particle cannons? Other push-back weapons?
-	gun 48 -208
-	gun 38 -196
-	gun 58 -196
-	gun 28 -174
-	gun 68 -174
+	turret -28 162 "Korath Banisher"
 	# Docking on arms
 	bay Fighter -94 -50
 		under
