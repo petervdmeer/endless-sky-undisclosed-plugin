@@ -22,6 +22,9 @@
 # - Star Queen Carrier variant (possibly flying in formation with the Hauler VI)
 # - Marauder Behemoth
 
+# Other weapons considered:
+# - "Healing Beam" "Beam that restores hull on friendly ships." (not possible in current codebase)
+# - "Preservation Beam" "Beam that restores shield (fully) and hull to just below disabled on hostile ships." (not possible in current codebase)
 
 
 person "Danau"
@@ -190,7 +193,7 @@ ship "Hauler VI (PTR)"
 		"Cloaking Device"
 		"Overclocked Repair Module" 11
 		"Large Battery Module" 5
-		"Heliarch Attractor"
+		"Heat Needle"
 		"Korath Disruptor" 2
 		"Antimatter Core" 4
 		"Chameleon Tongue" 1
@@ -202,8 +205,8 @@ ship "Hauler VI (PTR)"
 	gun -68 -174
 	# Turret on cockpit front: Heat Needle mount.
 	# The attractor compensates for the Banishers
-	turret -48 -124 "Korath Grab-Strike"
-	turret -48 -104 "Heliarch Attractor"
+	turret -48 -154 "Heat Needle"
+	turret -48 -104 "Korath Grab-Strike"
 	# Spinal mount cannon. (alternative: "Dragonflame Cannon")
 	gun 48 -128 "Chameleon Tongue"
 	# Guns on front fighter docks
@@ -213,7 +216,7 @@ ship "Hauler VI (PTR)"
 	# Turret on outer side of left of spinal cannon
 	#turret 92 -60
 	# Turrets on middle fighter bay mounts
-	# The Drak Distancer makes the Chameleon Tongue work better
+	# Does the Drak Distancer make the Chameleon Tongue work better?
 	turret 0 -60 "Sheragi Anti-Missile"
 	turret 0 14 "Drak Distancer"
 	turret 0 86 "Tier 3 Anti-Missile"

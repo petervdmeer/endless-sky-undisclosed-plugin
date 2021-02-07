@@ -26,7 +26,7 @@ outfit "Rock launcher"
 		"shield damage" 1
 		"hull damage" 1
 	description "A very sophisticated launch system that launches very primitive projectiles."
-	description "This system is clearly designed by an advanced species that is has little experience with war."
+	description "This system is clearly designed by an advanced species that has little experience with war."
 
 
 
@@ -38,30 +38,34 @@ outfit "Rock launcher"
 outfit "Heat Needle"
 	category "Turrets"
 	cost 140000
-	#thumbnail "outfit/heat needle"
-	mass 90
-	"outfit space" -90
-	"weapon capacity" -90
+	thumbnail "outfit/laser turret"
+	mass 40
+	"outfit space" -40
+	"weapon capacity" -40
 	"turret mounts" -1
 	"required crew" 9
-	"clusterers colony" -1
+	"clusterers colony" -10
 	weapon
-		sprite "projectile/2x laser"
-			"frame rate" 1
-		"hardpoint sprite" "hardpoint/laser turret"
+		#TODO: needs own sounds, hit-effects and turret
+		# Should be a very thin red beam. (The type of beam you would expect when a sniper is targeting you and using a laser marker.)
+		sprite "projectile/heat_needle"
+			#"frame rate" 1
+		"hardpoint sprite" "hardpoint/warder"
 		"hardpoint offset" 7.
 		sound "laser"
 		"hit effect" "beam laser impact"
 		"inaccuracy" .5
 		"turret turn" 6
-		"velocity" 660
+		"velocity" 3000
 		"lifetime" 1
 		"reload" 1
 		"firing energy" 1
 		"firing heat" -280
-		"heat damage" 200
+		"heat damage" 0.1
 		"shield damage" 1
 		"hull damage" 1
+		"turret turn" 5.0
+	description "Beam that continuously transfers a tiny amount of heat towards a target ship. Not very damaging, but with a very long range."
 	description "Superheated heatsink surrounded by movable heatshields. Works as cooler when the heatshields are moved away from the heatsink and as directed long-distance heat-transfer weapon when they surround the heatsink."
 	description "This weapon has quite some moving parts, and this weapon (like other Clusteres weapons) has very limited computer control so it requires quite some crew to operate."
 
