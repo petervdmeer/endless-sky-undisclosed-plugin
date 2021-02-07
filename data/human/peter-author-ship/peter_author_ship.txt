@@ -1,17 +1,13 @@
 # Author ship for Petervdmeer.
 
 # Ship type: Hauler VI (modified)
-# Luxurious StarQueen glass type cockpit.
-# Left side of ship is fully dedicated to a spinal weapon (chameleon tongue or dragons flame).
+# Luxurious StarQueen glass type cockpit on one side.
+# Other side of ship is fully dedicated to a spinal weapon (chameleon tongue or dragons flame).
 
 # Alternatives considered (but not chosen):
 # - Have parts of the Hauler VI detach as separate ships (cockpit as fast attacker with flamethrowers, pods as missile launchers)
 # - Have all parts move at very high speed after separation.
-# - Have a Sheragi cannon built in into the left 3 pods.
-# - Have a Sheragi cannon built into both pod sides (at angle, requiring aiming)
 # - Have an anti-matter cannon built in into one side (or in a pod that splits off as a separate ship).
-# - Installing skylances on the Hauler VI.
-# - No hyperdrive, jumpdrive or keystones (requiring take-off from planet).
 
 # Alternative ships considered (instead of the Hauler VI or possibly as ships flying in formation):
 # - A ship in Hexagonal shape (flat side front)?
@@ -157,10 +153,10 @@ ship "Hauler VI (PTR)"
 		"weapon capacity" 933
 		"engine capacity" 158
 		"required crew" 3
-		"bunks" 44
+		"bunks" 88
 		"mass" 470
 		"drag" 12.5
-		"cargo space" 780
+		"cargo space" 120
 		"cargo scan power" 9
 		"cargo scan speed" 1
 		"outfit scan power" 25
@@ -183,7 +179,7 @@ ship "Hauler VI (PTR)"
 		"Large Heat Shunt" 3
 		"Thruster (Planetary Class)"
 		"Steering (Stellar Class)"
-		"Tier 3 Anti-Missile"
+		"Tier 3 Anti-Missile" 2
 		"Sheragi Anti-Missile"
 		"Korath Grab-Strike"
 		"Korath Banisher" 4
@@ -198,11 +194,10 @@ ship "Hauler VI (PTR)"
 		"Antimatter Core" 4
 		"Chameleon Tongue" 1
 		"Quarg Skylance" 4
-		"Drak Distancer" 1
+		"Heavy Ion Cyclotron" 5
 	# Guns on front of cockpit.
-	# Inhibitor cannons? Particle cannons? Other push-back weapons?
-	gun -28 -174
-	gun -68 -174
+	gun -28 -174 "Heavy Ion Cyclotron"
+	gun -68 -174 "Heavy Ion Cyclotron"
 	# Turret on cockpit front: Heat Needle mount.
 	# The attractor compensates for the Banishers
 	turret -48 -154 "Heat Needle"
@@ -210,15 +205,15 @@ ship "Hauler VI (PTR)"
 	# Spinal mount cannon. (alternative: "Dragonflame Cannon")
 	gun 48 -128 "Chameleon Tongue"
 	# Guns on front fighter docks
-	gun -98 -94
-	gun 4 -94
-	gun 90 -94
+	gun -98 -94 "Heavy Ion Cyclotron"
+	gun 4 -94 "Heavy Ion Cyclotron"
+	gun 90 -94 "Heavy Ion Cyclotron"
 	# Turret on outer side of left of spinal cannon
 	#turret 92 -60
 	# Turrets on middle fighter bay mounts
 	# Does the Drak Distancer make the Chameleon Tongue work better?
-	turret 0 -60 "Sheragi Anti-Missile"
-	turret 0 14 "Drak Distancer"
+	turret 0 -60 "Tier 3 Anti-Missile"
+	turret 0 14 "Sheragi Anti-Missile"
 	turret 0 86 "Tier 3 Anti-Missile"
 	# Turrets on top of pods
 	turret -48 -56 "Quarg Skylance"
@@ -255,7 +250,7 @@ ship "Hauler VI (PTR)"
 		angle -180
 		under
 	# Belly docking (cockpit)
-	bay Fighter 48 -136
+	bay Fighter -48 -136
 		under
 	# Belly docking (pods); Drones? / Fighters?
 	bay Fighter -48 -56
