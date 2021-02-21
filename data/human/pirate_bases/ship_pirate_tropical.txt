@@ -1,5 +1,5 @@
 ship "Pirate Base Tropical"
-	sprite "ships/human/pirate_base_tropical"
+	sprite "ship/human/pirate_base_tropical"
 	plural "Pirate Bases"
 	attributes
 		category "Transport"

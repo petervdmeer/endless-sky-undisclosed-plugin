@@ -1,5 +1,5 @@
 ship "Marauder Queen (Engines)"
-	sprite "ships/human/mqueene"
+	sprite "ship/human/mqueene"
 	attributes
 		category "Medium Warship"
 		"cost" 6500000

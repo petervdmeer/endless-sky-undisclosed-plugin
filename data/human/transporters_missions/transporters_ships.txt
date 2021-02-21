@@ -1,7 +1,7 @@
 # Haulers numbering is based on the amount of containers, so with six containers we call this one the Hauler VI.
 ship "Hauler VI prototype"
-	sprite "ships/human/hauler vi"
-	#sprite "ships/human/hauler vi prototype"
+	sprite "ship/human/hauler vi"
+	#sprite "ship/human/hauler vi prototype"
 	thumbnail "thumbnail/hauler iii"
 	attributes
 		category "Heavy Freighter"
@@ -60,7 +60,7 @@ ship "Hauler VI prototype"
 
 
 ship "Hauler VI"
-	sprite "ships/human/hauler vi"
+	sprite "ship/human/hauler vi"
 	thumbnail "thumbnail/hauler iii"
 	attributes
 		category "Heavy Freighter"
@@ -117,7 +117,7 @@ ship "Hauler VI"
 
 
 ship "Hauler CIV"
-	sprite "ships/human/hauler civ"
+	sprite "ship/human/hauler civ"
 	attributes
 		category "Heavy Freighter"
 		"cost" 183000000
@@ -198,7 +198,7 @@ ship "Hauler CIV"
 	description "   Costs of this ship is also prohibitive, most captains will prefer to fly with multiple smaller cargo ships."
 
 ship "Swarm Transporter (Prototype)"
-	sprite "ships/human/swarm transporter prototype"
+	sprite "ship/human/swarm transporter prototype"
 	attributes
 		category "Heavy Freighter"
 		"cost" 183000000

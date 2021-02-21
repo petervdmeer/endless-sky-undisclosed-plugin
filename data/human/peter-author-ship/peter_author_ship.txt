@@ -141,7 +141,7 @@ person "Danau"
 
 
 ship "Hauler VI (PTR)"
-	sprite "ships/human/hauler ptr hvi"
+	sprite "ship/human/hauler ptr hvi"
 	"never disabled"
 	attributes
 		category "Heavy Warship"

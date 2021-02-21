@@ -1,5 +1,5 @@
 ship "Marauder Behemoth (Engines)"
-	sprite "ships/human/mbehemothe"
+	sprite "ship/human/mbehemothe"
 	attributes
 		category "Heavy Warship"
 		"cost" 14800000

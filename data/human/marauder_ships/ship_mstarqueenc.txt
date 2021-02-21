@@ -1,5 +1,5 @@
 ship "Marauder Queen (Carrier)"
-	sprite "ships/human/mqueenc"
+	sprite "ship/human/mqueenc"
 	attributes
 		category "Transport"
 		"cost" 7500000
