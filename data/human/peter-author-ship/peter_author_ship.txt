@@ -18,9 +18,9 @@
 # - Star Queen Carrier variant (possibly flying in formation with the Hauler VI)
 # - Marauder Behemoth
 
-# Other weapons considered:
-# - "Healing Beam" "Beam that restores hull on friendly ships." (not possible in current codebase)
-# - "Preservation Beam" "Beam that restores shield (fully) and hull to just below disabled on hostile ships." (not possible in current codebase)
+# Other weapons considered (which are not possible in the current codebase):
+# - "Healing Beam" "Beam that restores hull on friendly ships."
+# - "Preservation Beam" "Beam that restores shield (fully) and hull to just below disabled on hostile ships."
 
 
 person "Danau"
@@ -186,7 +186,6 @@ ship "Hauler VI (PTR)"
 		"Systems Core (Large)" 3
 		"Fuel Processor" 8
 		"Luxury Accommodations"
-		"Cloaking Device"
 		"Overclocked Repair Module" 11
 		"Large Battery Module" 5
 		"Heat Needle"
