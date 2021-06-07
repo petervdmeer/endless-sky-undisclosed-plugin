@@ -3,6 +3,7 @@
 # Ship type: Hauler VI (modified)
 # Luxurious StarQueen glass type cockpit on one side.
 # Other side of ship is fully dedicated to a spinal weapon (chameleon tongue or dragons flame).
+# Very slow moving and turning ship when all fighters are docked. Relatively fast when they are deployed.
 
 # Alternatives considered (but not chosen):
 # - Have parts of the Hauler VI detach as separate ships (cockpit as fast attacker with flamethrowers, pods as missile launchers)
@@ -22,8 +23,8 @@
 # - "Healing Beam" "Beam that restores hull on friendly ships."
 # - "Preservation Beam" "Beam that restores shield (fully) and hull to just below disabled on hostile ships."
 
-
-person "Danau"
+# Asbran; sword from a seagod, Dutch/Frysian. Similar to Excalibur, but less known.
+person "Asbran"
 	government "Author"
 	personality
 		heroic
@@ -229,11 +230,10 @@ ship "Hauler VI (PTR)"
 		"Chameleon Tongue" 1
 		"Quarg Skylance" 4
 		"Heavy Ion Cyclotron" 5
-	# Guns on front of cockpit.
+	# Guns on front of cockpit (should have pushback, but Cyclotrons are a bit rude, maybe just particle cannons?).
 	gun -28 -174 "Heavy Ion Cyclotron"
 	gun -68 -174 "Heavy Ion Cyclotron"
 	# Turret on cockpit front: Heat Needle mount.
-	# The attractor compensates for the Banishers
 	turret -48 -154 "Heat Needle"
 	turret -48 -104 "Korath Grab-Strike"
 	# Spinal mount cannon. (alternative: "Dragonflame Cannon")
