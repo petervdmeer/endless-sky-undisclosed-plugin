@@ -231,7 +231,6 @@ ship "Hauler VI (PTR)"
 		"Quarg Skylance" 4
 		"Heavy Ion Cyclotron" 5
 		"Drak Distancer" 1
-	# Guns on front of cockpit (should have pushback, but Cyclotrons are a bit rude, maybe just particle cannons?).
 	gun -28 -174 "Heavy Ion Cyclotron"
 	gun -68 -174 "Heavy Ion Cyclotron"
 	# Turret on cockpit front: Heat Needle mount.
