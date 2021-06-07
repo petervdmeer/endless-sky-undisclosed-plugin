@@ -163,7 +163,7 @@ outfit "Chameleon Tongue"
 		"lifetime" 1
 		"reload" 1
 		"firing energy" 16
-		"firing heat" 40
+		"firing heat" 10
 		# Don't grab any ships/items inbetween
 		phasing
 		# Pull strongly at a long distance, but reduce pull very close to the ship.
@@ -215,7 +215,7 @@ ship "Hauler VI (PTR)"
 		"Large Heat Shunt" 3
 		"Thruster (Planetary Class)"
 		"Steering (Stellar Class)"
-		"Tier 3 Anti-Missile" 2
+		"Tier 3 Anti-Missile"
 		"Sheragi Anti-Missile"
 		"Korath Grab-Strike"
 		"Korath Banisher" 4
@@ -230,6 +230,7 @@ ship "Hauler VI (PTR)"
 		"Chameleon Tongue" 1
 		"Quarg Skylance" 4
 		"Heavy Ion Cyclotron" 5
+		"Drak Distancer" 1
 	# Guns on front of cockpit (should have pushback, but Cyclotrons are a bit rude, maybe just particle cannons?).
 	gun -28 -174 "Heavy Ion Cyclotron"
 	gun -68 -174 "Heavy Ion Cyclotron"
@@ -245,9 +246,9 @@ ship "Hauler VI (PTR)"
 	# Turret on outer side of left of spinal cannon
 	#turret 92 -60
 	# Turrets on middle fighter bay mounts
-	# Does the Drak Distancer make the Chameleon Tongue work better?
-	turret 0 -60 "Tier 3 Anti-Missile"
-	turret 0 14 "Sheragi Anti-Missile"
+	# The Drak Distancer should work nicely together with the Chameleon Tongue
+	turret 0 -60 "Sheragi Anti-Missile"
+	turret 0 14 "Drak Distancer"
 	turret 0 86 "Tier 3 Anti-Missile"
 	# Turrets on top of pods
 	turret -48 -56 "Quarg Skylance"

@@ -60,7 +60,7 @@ outfit "Heat Needle"
 		"lifetime" 1
 		"reload" 1
 		"firing energy" 1
-		"firing heat" -280
+		"firing heat" -4.5
 		"heat damage" 0.1
 		"shield damage" 1
 		"hull damage" 1
