@@ -1,6 +1,6 @@
 # This adds a racetrack in the Suhail system
 # * Bactrian, Mules and Star Queens as spectator ships.
-# * Observation drones as track markers.
+# * Observation drones (or specific drones/ships) as track markers.
 # * Some small ships as racers.
 
 # Setup race-track using bought ships...
@@ -30,7 +30,7 @@ mission "Deep Race: Megaparsec team"
 	on offer
 		conversation
 			`You just started eating your dinner in a local restaurant when you hear loudspears activate for a public announcement;`
-			`"Attention! Attention! Be warmly welcomed by the friendly citizens of Hell...AHHH!" Blam! "Get him!"`
+			`"Attention! Attention! Be warmly welcomed by the friendly citizens of Hellll...AHHH!" Blam! "Get him!"`
 			`There are some more sounds of violence, sounds of people running away and then there is silence.`
 			`Most restaurant visitors look a bit puzzled and some young Syndicate pilots at a table next to you are laughing.`
 			choice
@@ -41,22 +41,31 @@ mission "Deep Race: Megaparsec team"
 				`Ignore the whole thing.`
 					decline
 			label socialize
-			`When you turn to the pilots, then one of the pilots responds; "Beat it, old-timer, we've got more important things to do than chat with you."`
+			`When you turn to the pilots, then one of the pilots responds; "Beat it, old-timer, we've got more important things to do than to chat with you."`
 			choice
-				`"Listen kid, if you want to become successfull in the space-piloting business, then you better talk to people."`
-				`(Hit the pilot on the nose.)`
-				`(Kick the young brat with your super karate move.)`
+				`"Listen kid, if you want to become successfull in the space-piloting business, then you better talk to experienced people."`
 				`(Ignore them and return to your dinner.)`
+					goto mealfinish
+			`The Syndicate pilots are laughing; "Become succesfull? Hahaha, You mean more succesfull than we already are? You obviously don't know whom you are talking to, we are the best racing team in the galaxy."`
+			`The pilots immediately turn to eachother and try to ignore you.`
+			choice
+				`"I heard that the Lionheart racing team is much more fun to talk to than you guys."`
+				`(Ignore them and return to your dinner.)`
+					goto mealfinish
+			``
 			label mealfinish
-			`While finishing your dinner you notice that the Syndicate pilots become a bit nervous.`
+			`While finishing your dinner you notice that the Syndicate pilots are looking at the time a bit nervously.`
+			`Suddenly they jump up; "There he is!" "Security had him arrested!" "What do we do now?"`
+			choice
+				`"Do you need some help?"`
+				"(Wait to see what happens next.)"
+			`One of the pilots turns to you; "Captain, maybe we need some help from you. Our lead pilot got arrested and we need to compete in the race on <planet>."`
 
 
 			# Main pilot (making the announcement) arrested and ship confiscated.
 			# Syndicate pilots need help from captain <first> <last>.
 			# Rich relative at stop-over. Side mission to help relative get the arrested guy free.
 
-			choice
-				"Do you need some help?"
 
 
 
