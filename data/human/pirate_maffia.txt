@@ -1,8 +1,16 @@
+
 mission "Maffia Extortion"
+	source
+		government "Pirate"
+	on accept
+		payment -200000
+	to offer
+		random < 2
+		credits >= 2000000
 	on offer
 		conversation
 			`A man in a tailored suit, wearing sunglasses, shiny shoes and green hair approaches you;`
-			`"Hey, that's a very nice ship you have there. Would be a shame if something happened to it."`
+			`"Hey, that's a very nice ship you have there. Would be a shame if anything happened to it."`
 			`You notice that he is missing a finger on each of his hands.`
 			choice
 				`"Thank you. My name is <first> <last>. Whom do I have the pleasure of talking to?"`
@@ -15,6 +23,8 @@ mission "Maffia Extortion"
 					goto maffia
 				`"Are you trying to extort me?"`
 					goto maffia
+				`"Yes, it helps me transport stuff for some of the most dangerous people on this planet."`
+					goto uncovered
 				`(Draw your sidearm and shoot the man)`
 					goto shoot
 				`"I don't have time to talk."`
@@ -52,10 +62,10 @@ mission "Maffia Extortion"
 			`	"You would be wise to listen to locals with experience, especially in dangerous places like here.`
 			label donation
 			`	"If you care about safety, then I could make a donation to the System Safety Foundation on your behalf.`
-			`	"A payment of about 2,000 credits really goes a long way around here."`
+			`	"A payment of about 200,000 credits really goes a long way around here."`
 			choice
-				`(pay 2,000 credits)`
-					#payment -2000
+				`(pay 200,000 credits)`
+					#payment -200000
 					goto next_steps
 				`"How can I be sure that the money is spent well?"`
 					goto impatient
@@ -70,8 +80,8 @@ mission "Maffia Extortion"
 			label impatient
 			`The man sounds annoyed; "Listen, I don't have all day to talk! Do you pay up or not?!"`
 			choice
-				`(pay 2,000 credits)`
-					#payment -2000
+				`(pay 200,000 credits)`
+					#payment -200000
 					goto next_steps
 				`"I don't trust you, so you are not getting any money from me."`
 					goto next_steps
@@ -79,8 +89,6 @@ mission "Maffia Extortion"
 					goto next_steps
 				`"Listen, I see that you are missing a finger on each hand. You look like a goon, and not a succesfull one."`
 					goto uncovered
-			label do_pay
-			#payment -2000
 			label next_steps
 			`"Listen, I wouldn't be talking to the authorities about this if I were you. Most of them are participating anyway."`
 			`The man walks away. You consider what to do next.`
@@ -90,14 +98,14 @@ mission "Maffia Extortion"
 				`(Go to a bar and ask for whomever is in charge.)`
 					goto bar
 				`(Shrug off the whole thing and take no further action.)`
-					decline
+					accept
 			label police
 			`You find the ruins of what appears to have been a police station. The building appears to have been thouroughly destroyed, hopefully without anybody present inside the building.`
 			choice
 				`(Go to a bar and ask for whomever is in charge.)`
 					goto bar
 				`(Shrug off the whole thing and take no further action.)`
-					decline
+					accept
 			label bar
 			`You walk towards the closest bar, but you meet the green-haired man that you just had a conversation with.`
 			`He looks surprised and asks; "Were you going to rat me out to the local boss???"`
@@ -106,9 +114,9 @@ mission "Maffia Extortion"
 				`"What I'm going to do is none of your business."`
 				`"Don't worry, I'm just taking a walk."`
 			label uncovered
-			`The man is starting to act a bit nervous. "Sorry I bothered you before. Can we just forget that that conversation happened?"`
+			`The man is starting to act a bit nervous. "Sorry I bothered you. Can we just forget that that conversation happened?"`
 			choice
-				`"Well, conversations like that are hard to forget."`
+				`"Well, conversations like this are hard to forget."`
 					goto payback
 				`"Nice scam you have running here, would be a shame if somebody would tell the local godfather about it."`
 					goto payback
@@ -125,30 +133,32 @@ mission "Maffia Extortion"
 					goto too_much
 				`"5,000"`
 					#payment 5000
-					goto paidback
+					decline
 				`"2,000"`
 					#payment 2000
-					goto paidback
+					decline
 				`"1,000"`
 					#payment 1000
-					goto paidback
+					decline
 				`"500"`
 					#payment 500
-					goto paidback
-				`"I don't need credits. Let's just forget the conversation."`
-					accept	
+					decline
+				`"I don't need your credits. Just forget this conversation ever happened."`
+					decline	
 			label too_much
 			`"That is too much! 2389 credits is all I have. Is that sufficient for you?"`
 			choice
 				`"Sure"`
 					#payment 2389
-					accept
+					decline
 				`"No way, I want a lot more."`
 					goto far_too_much
 			label far_too_much
 			`The man starts panicking and is clumsily reaching in his jacket, maybe to get some money, but more likely reaching for a gun.`
 			choice
-				`(Mock the man)`
+				`(Try to calm down the man)`
+					goto draws
+				`(Mock the man further)`
 					goto draws
 				`(Draw your sidearm and shoot the man)`
 					goto shoot
@@ -158,46 +168,17 @@ mission "Maffia Extortion"
 				`"Haha, you are really a failure as a goon."`
 				`(Draw your sidearm and shoot the man)`
 					goto shoot
-			`The man tries to fire his weapon once more, but now it does function and the bullet hits you inbetween the eyes. You die instantly.`
+			`The man tries to fire his weapon once more, but now it does function and the bullet hits you inbetween the eyes. You die almost instantly, but you do have a few microseconds to reflect on the wisdom of mocking a man that is pointing a gun at you.`
 			die
 			label shoot
-			`You shoot at the man and the bullet hits inbetween his eyes; the man immediately dies. A crowd starts to form around you.`
+			`You shoot and hit inbetween the eyes; the man immediately dies. A crowd starts to form around you.`
+			`Most bystanders look very surprised, but you also notice an angry sentiment starting to brew in the crowd and many bystanders seem to be armed. It might be wise to leave quickly.`
 			choice
-				`Run towards your ship, with sidearm still in your hand.`
-				`Put away your sidearm, then run for your ship.`
-				`Put away your sidearm, then slowly walk to your ship.`
-			`A person with a deformed face, (body also scarred and bend) approaches you; "I'm Chantenel".`
-			
-			
-			label paidback
-			`Maffia boss shows up, demands payment.`
-			choice
-				`But he started.`
-				`But he tried to kill me.`
-				`I'm not going to pay you.`
-			`Chantenel responds in a loud threathening voice; "I don't care. You have 2 choices, either pay me 5,000 credits, or die here and now."`
-			`And he adds in a much less loud but equally threathening voice; "And I don't allow smart-asses to undermine my authority."`
-			choice
-				`(Pay 5,000 credits)`
-					goto finished
-				`I'll pay you 2,000 credits.`
-				`I'll pay you 500 credits.`
-					goto too_smart
-			"That wasn't an invitation for negotiations. The fine is now 10,000 credits and you have to leave immediately."
-			choice
-				`(Pay 10,000 credits)`
-					goto finished
-				`"But we are negotiating now."`
-					goto too_smart
-				`"I'll pay you the original 5,000 credits."`
-					goto too_smart
-			label too_smart
-			`You feel a short sting and you drop dead 2 seconds later. The last you see is a sad look on Chantenels face. Seems he didn't really wanted to kill you.`
+				`(Run towards your ship and leave immediately.)`
+					goto leave
+				`(Put away your sidearm and pretend nothing happened.)`
+			`You walk away from the body and pretend nothing happened, but you don't get far and die from multiple laser-beams hitting you.`
 			die
-			label finished
-			`Chantenel slowly walks away.`
-			`When you check your bank-accounts afterwards, then you see that your payment got refunded and that you got an additional payment of 10,000 credits.`
-			`There is a message attached to the last payment; "Many have seen the fear in your eyes when you paid, this will ensure loyalty for decades, which is worth more than the louzy amount of credits you paid me.`
-			`"If you ever talk about this, then I will still kill you. And if you ever need anything, then don't contact me."`
-			#payment 10000
-			accept
+			label leave
+			`You make it to your ship alive and depart under a rain of bullets and laser-weapon-fire. You might want to stay away from this planet for a few days.`
+			flee
