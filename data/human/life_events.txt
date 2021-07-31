@@ -22,24 +22,26 @@
 #   - Clause about mariage contract costs (who will bear those costs).
 #   - Clause about the syndicate (player will or will not work there?)
 
-mission "Getting Married (Syndicate Style)"
+mission "Speeddating (Syndicate Style)"
 	on offer
 		conversation
 			`One of the spaceport bars is crowded with people. Do you want to check it out?`
 			choice
 				"(Yes, let`s have a look.)"
-				"(No, crowded spacebars is not my thing.)"
+				"(No, crowded bars is not my thing.)"
 					decline
 			`A man in a clown-costume and a syndicate logo on his chest greets you when you enter the bar; "welcome to match and marry!"`
-			`To get to the main area, you will need to walk through an arc. There are a number of arcs you can choose from, which one do you choose?`
+			`To get to the main area, you will need to walk through one of the arcs here."`
+			`There are a number of arcs you can choose from.`
 			choice
-				`"True Love (arc decorated with roses)"`
-				`"No More Lonely (arc decorated with photos of happy people)"`
+				`(walk through 'True Love', an arc decorated with roses)"`
+				`(walk through 'No More Lonely', an arc decorated with photos of happy people"`
 					goto nolonely
-				`"Instant Marriage (arc decorated with rings)"`
+				`(walk through 'Instant Marriage', an arc decorated with rings)"`
 					goto ceremony_second
-				`"Direct Divorce (arc decorated with broken chains)"`
-				`"Business Deals (black arc with little to no decoration)"`
+				`(walk through 'Direct Divorce', an arc decorated with broken chains)"`
+				`(walk through 'Business Deals', a black arc with little to no decoration)"`
+				`(tell the man that you prefer to transport passengers over speeddating)`
 				`(leave the place, this is not for you)`
 					decline
 			label truelove
@@ -64,10 +66,19 @@ mission "Getting Married (Syndicate Style)"
 			`You enter a small office where a syndicate lawyer is sitting behind a desk. He greets you with; "My time is expensive. Talking to me costs you 100 credits per minute."`
 			label business_main
 			choice
+				`"I'm a spaceship captain and I was told that you have work for me transporting passengers."`
+					goto passenger_transport
 				`"What are we doing here?"`
 					goto business_purpose
 				`"Sorry, I will not participate in this nonsense."`
 					decline
+			label passenger_transport
+			`The lawyer responds very annoyed; "Transporters use the personell entrance, not the main entrance! Who sent you here?"`
+			choice
+				`"I just walked in by myself."`
+				`"The clown at the entrance of the bar."`
+				`"My time is also expensive, having me talk about that will cost you 200 credits."`
+				`"I'm not going to tell you."`
 			label business_purpose
 			`The lawyer responds; "You came in here visiting me. You tell me what you want. How can I help you? (This question just cost you 100 credits.)"`
 			#payment -100
