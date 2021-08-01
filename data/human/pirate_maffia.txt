@@ -24,11 +24,11 @@ mission "Maffia Extortion"
 				`"Are you trying to extort me?"`
 					goto maffia
 				`"Yes, it helps me transport stuff for some of the most dangerous people on this planet."`
-					goto uncovered
+					goto unnerved
 				`(Draw your sidearm and shoot the man)`
 					goto shoot
 				`"I don't have time to talk."`
-					defer
+					goto specifics
 			label nameless
 			`Your greeting triggers a grumpy reply about the value of anonymity in a place like this.`
 			choice
@@ -42,8 +42,6 @@ mission "Maffia Extortion"
 					goto maffia
 				`(Draw your sidearm and shoot the man)`
 					goto shoot
-				`"I don't have time to talk."`
-					defer
 			label specifics
 			`The man responds; "Well, a fleet of unfriendly ships in this system might just try to blow your ship to pieces."`
 			choice
@@ -53,6 +51,8 @@ mission "Maffia Extortion"
 					goto maffia
 				`"And you are the local goon that can prevent such bad things from happening?"`
 					goto maffia
+				`"I really don't have time to talk to you."`
+					goto funeral
 			label unconcerned
 			`The man responds; "Maybe you want to improve that situation?`
 				goto donation
@@ -76,19 +76,19 @@ mission "Maffia Extortion"
 				`"And what dangers should I be affraid off?"`
 					goto impatient
 				`"Listen, I see that you are missing a finger on each hand. You look like a goon, and not a succesfull one."`
-					goto uncovered
+					goto unnerved
 			label impatient
 			`The man sounds annoyed; "Listen, I don't have all day to talk! Do you pay up or not?!"`
 			choice
 				`(pay 200,000 credits)`
 					#payment -200000
-					goto next_steps
+					goto payup
 				`"I don't trust you, so you are not getting any money from me."`
-					goto next_steps
+					goto funeral
 				`"I've already heard enough, I'm going to talk to the authorities."`
 					goto next_steps
 				`"Listen, I see that you are missing a finger on each hand. You look like a goon, and not a succesfull one."`
-					goto uncovered
+					goto unnerved
 			label next_steps
 			`"Listen, I wouldn't be talking to the authorities about this if I were you. Most of them are participating anyway."`
 			`The man walks away. You consider what to do next.`
@@ -113,7 +113,7 @@ mission "Maffia Extortion"
 				`"What an excellent idea! Yes, I'll just do that."`
 				`"What I'm going to do is none of your business."`
 				`"Don't worry, I'm just taking a walk."`
-			label uncovered
+			label unnerved
 			`The man is starting to act a bit nervous. "Sorry I bothered you. Can we just forget that that conversation happened?"`
 			choice
 				`"Well, conversations like this are hard to forget."`
@@ -121,7 +121,7 @@ mission "Maffia Extortion"
 				`"Nice scam you have running here, would be a shame if somebody would tell the local godfather about it."`
 					goto payback
 				`(Agree)`
-					accept
+					decline
 			label payback
 			`The man is now really nervous and asks: "How much credits do you need to just forget this whole conversation happened?"`
 			choice
@@ -168,7 +168,7 @@ mission "Maffia Extortion"
 				`"Haha, you are really a failure as a goon."`
 				`(Draw your sidearm and shoot the man)`
 					goto shoot
-			`The man tries to fire his weapon once more, but now it does function and the bullet hits you inbetween the eyes. You die almost instantly, but you do have a few microseconds to reflect on the wisdom of mocking a man that is pointing a gun at you.`
+			`The man tries to fire his weapon once more, but now it does function and the bullet hits you inbetween the eyes. You die almost instantly, but you do have a few microseconds to reflect on the wisdom of mocking a man that is trying to fire a gun at you.`
 			die
 			label shoot
 			`You shoot and hit inbetween the eyes; the man immediately dies. A crowd starts to form around you.`
@@ -180,5 +180,11 @@ mission "Maffia Extortion"
 			`You walk away from the body and pretend nothing happened, but you don't get far and die from multiple laser-beams hitting you.`
 			die
 			label leave
-			`You make it to your ship alive and depart under a rain of bullets and laser-weapon-fire. You might want to stay away from this planet for a few days.`
+			`You make it to your ship alive and depart under a rain of bullets and laser-weapon-beams. You might want to stay away from this planet for a few days.`
 			flee
+			label payup
+			`The man takes your credits, responds with a brief "Thank you" and walks away.`
+			accept
+			label funeral
+			`The man responds "Your funeral, not mine." and walks away. You might want to be carefull when leaving this planet.`
+			decline
