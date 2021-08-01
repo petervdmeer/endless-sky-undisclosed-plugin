@@ -1,5 +1,5 @@
 
-mission "Maffia Extortion"
+mission "Mafia Extortion"
 	source
 		government "Pirate"
 	on accept
@@ -17,12 +17,12 @@ mission "Maffia Extortion"
 					goto nameless
 				`"Yes, I'm very happy with my ship."`
 					goto specifics
-				`"What should I be affraid off that would happen to my ship?"`
+				`"What should I be afraid off that would happen to my ship?"`
 					goto specifics
-				`"You sound like one of those maffia goons."`
-					goto maffia
+				`"You sound like one of those Mafia goons."`
+					goto mafia
 				`"Are you trying to extort me?"`
-					goto maffia
+					goto mafia
 				`"Yes, it helps me transport stuff for some of the most dangerous people on this planet."`
 					goto unnerved
 				`(Draw your sidearm and shoot the man)`
@@ -32,31 +32,31 @@ mission "Maffia Extortion"
 			label nameless
 			`Your greeting triggers a grumpy reply about the value of anonymity in a place like this.`
 			choice
-				`"Sounds like you are affraid of talking to me. Why is that?"`
-					goto maffia
-				`"What should I be affraid off that would happen to my ship?"`
+				`"Sounds like you are afraid of talking to me. Why is that?"`
+					goto mafia
+				`"What should I be afraid off that would happen to my ship?"`
 					goto specifics
-				`"You sound like one of those maffia goons."`
-					goto maffia
+				`"You sound like one of those mafia goons."`
+					goto mafia
 				`"Are you trying to extort me?"`
-					goto maffia
+					goto mafia
 				`(Draw your sidearm and shoot the man)`
 					goto shoot
 			label specifics
 			`The man responds; "Well, a fleet of unfriendly ships in this system might just try to blow your ship to pieces."`
 			choice
-				`"Haha, that is business as usual in this system."`
+				`"Ha ha, that is business as usual in this system."`
 					goto unconcerned
 				`"And you have a way to prevent this from happening?"`
-					goto maffia
+					goto mafia
 				`"And you are the local goon that can prevent such bad things from happening?"`
-					goto maffia
+					goto mafia
 				`"I really don't have time to talk to you."`
 					goto funeral
 			label unconcerned
 			`The man responds; "Maybe you want to improve that situation?`
 				goto donation
-			label maffia
+			label mafia
 			`The man acts as if he is shocked by your remark, but his response doesn't feel sincere;`
 			`	"No way! I'm just a simple man walking around the spaceport and talking about life.`
 			`	"You would be wise to listen to locals with experience, especially in dangerous places like here.`
@@ -73,9 +73,9 @@ mission "Maffia Extortion"
 					goto impatient
 				`"I've already heard enough, I'm going to talk to the authorities."`
 					goto next_steps
-				`"And what dangers should I be affraid off?"`
+				`"And what dangers should I be afraid off?"`
 					goto impatient
-				`"Listen, I see that you are missing a finger on each hand. You look like a goon, and not a succesfull one."`
+				`"Listen, I see that you are missing a finger on each hand. You look like a goon, and not a successful one."`
 					goto unnerved
 			label impatient
 			`The man sounds annoyed; "Listen, I don't have all day to talk! Do you pay up or not?!"`
@@ -87,10 +87,14 @@ mission "Maffia Extortion"
 					goto funeral
 				`"I've already heard enough, I'm going to talk to the authorities."`
 					goto next_steps
-				`"Listen, I see that you are missing a finger on each hand. You look like a goon, and not a succesfull one."`
+				`"Listen, I see that you are missing a finger on each hand. You look like a goon, and not a successful one."`
 					goto unnerved
+			label funeral
+			`The man responds "Your funeral, not mine." and walks away.`
+			goto walks_away
 			label next_steps
 			`"Listen, I wouldn't be talking to the authorities about this if I were you. Most of them are participating anyway."`
+			label walks_away
 			`The man walks away. You consider what to do next.`
 			choice
 				`(Go to the closest thing that qualifies as police force on this planet.)`
@@ -98,7 +102,7 @@ mission "Maffia Extortion"
 				`(Go to a bar and ask for whomever is in charge.)`
 					goto bar
 				`(Shrug off the whole thing and take no further action.)`
-					accept
+					decline
 			label police
 			`You find the ruins of what appears to have been a police station. The building appears to have been thouroughly destroyed, hopefully without anybody present inside the building.`
 			choice
@@ -125,7 +129,11 @@ mission "Maffia Extortion"
 			label payback
 			`The man is now really nervous and asks: "How much credits do you need to just forget this whole conversation happened?"`
 			choice
+				`"100,000,000"`
+					goto far_too_much
 				`"1,000,000"`
+					goto far_too_much
+				`"200,000"`
 					goto far_too_much
 				`"50,000"`
 					goto too_much
@@ -165,13 +173,13 @@ mission "Maffia Extortion"
 			label draws
 			`The man somehow manages to draw a weapon and tries to shoot at you, but the weapon doesn't seem to function.`
 			choice
-				`"Haha, you are really a failure as a goon."`
+				`"Ha ha, you are really a failure as a goon."`
 				`(Draw your sidearm and shoot the man)`
 					goto shoot
 			`The man tries to fire his weapon once more, but now it does function and the bullet hits you inbetween the eyes. You die almost instantly, but you do have a few microseconds to reflect on the wisdom of mocking a man that is trying to fire a gun at you.`
 			die
 			label shoot
-			`You shoot and hit inbetween the eyes; the man immediately dies. A crowd starts to form around you.`
+			`You shoot and hit in-between the eyes; the man immediately dies. A crowd starts to form around you.`
 			`Most bystanders look very surprised, but you also notice an angry sentiment starting to brew in the crowd and many bystanders seem to be armed. It might be wise to leave quickly.`
 			choice
 				`(Run towards your ship and leave immediately.)`
@@ -185,6 +193,3 @@ mission "Maffia Extortion"
 			label payup
 			`The man takes your credits, responds with a brief "Thank you" and walks away.`
 			accept
-			label funeral
-			`The man responds "Your funeral, not mine." and walks away. You might want to be carefull when leaving this planet.`
-			decline
