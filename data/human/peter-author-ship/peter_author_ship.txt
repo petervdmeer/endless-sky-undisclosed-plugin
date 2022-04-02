@@ -18,13 +18,16 @@
 # - Star Queen Engines variant (possibly flying in formation with the Hauler VI)
 # - Star Queen Carrier variant (possibly flying in formation with the Hauler VI)
 # - Marauder Behemoth
+# - Hauler XL (40 pods; 4 pods long, 4 pods wide, with 3 pods wide, 2 pods wide and 1 pod wide layers on top of the lowest layer).
+# - Hauler CIV (104 pods; either in flat config, or in stacked config).
 
 # Other weapons considered (which are not possible in the current codebase):
 # - "Healing Beam" "Beam that restores hull on friendly ships."
 # - "Preservation Beam" "Beam that restores shield (fully) and hull to just below disabled on hostile ships."
 
-# Asbran; sword from a seagod, Dutch/Frysian. Similar to Excalibur, but less known.
-person "Asbran"
+# Other possible person names:
+# - Asbran; sword from a seagod, Dutch/Frysian. Similar to Excalibur, but less known.
+person "Danau"
 	government "Author"
 	personality
 		heroic
