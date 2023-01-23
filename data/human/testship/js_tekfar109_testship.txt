@@ -77,7 +77,7 @@ ship "JS Tek Far"
 		"Dragonflame Cannon"
 		"Quarg Skylance" 4
 		"Tracker Storage Pod" 22
-		"Sidewinder Missile Rack" 26
+		"Sidewinder Missile Rack" 25
 	engine -9 205 1
 	engine 9 205 1
 	# Escort versions had each gun-port listed here 3 times.
