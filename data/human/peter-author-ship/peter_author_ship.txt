@@ -8,6 +8,7 @@
 # Have some ships flying in formation around it. (With a stay-in-formation personality on those ships.)
 #  Hauler I, Hauler II and Hauler III ships seem ideal candidates to fly in formation around a Hauler VI.
 #  The fighters docked inside the Hauler VI could also assume formation once they undock. (But then they should not be equipped with flamethrowers, inhibitors and fast engines, but with something that makes sense for close escort ships.)
+#  StarQueen carriers?
 
 # Alternatives considered (but not chosen):
 # - Have parts of the Hauler VI detach as separate ships (cockpit as fast attacker with flamethrowers, pods as missile launchers)
