@@ -12,8 +12,6 @@
 # Alternatives considered (but not chosen):
 # - Some Esher-like impossible shapes to interconnect the two sets of 3 pods. (Korath has this in-lore in-game, but probably wouldnt work well on the Hauler VI.)
 # - Have parts of the Hauler VI detach as separate ships (cockpit as fast attacker with flamethrowers, pods as missile launchers)
-# - Have all parts move at very high speed after separation.
-# - Have an anti-matter cannon built in into one side (or in a pod that splits off as a separate ship).
 # - Weapon that works with patterns like the formations. (Too specific, better just use formations as-is.)
 
 # Alternative ships considered (instead of the Hauler VI or possibly as ships flying in formation):
