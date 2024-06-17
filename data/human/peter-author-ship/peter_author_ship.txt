@@ -1,4 +1,4 @@
-# Author ship for Petervdmeer.
+# Author ship for Peter vd Meer.
 
 # Ship type: Hauler VI (modified)
 # Luxurious StarQueen glass type cockpit on one side.
@@ -39,7 +39,6 @@
 # - "Healing Beam" "Beam that restores hull on friendly ships."
 # - "Preservation Beam" "Beam that restores shield (fully) and hull to just below disabled on hostile ships."
 
-# Other possible person names:
 person "Danau"
 	government "Author"
 	personality
@@ -97,6 +96,7 @@ person "Danau"
 			"the Laenfa"
 			"the Muursh"
 			"the Ourbools"
+			"Tycho Magnetic Anomaly 2"
 		word
 			"; "
 		word
@@ -140,7 +140,6 @@ person "Danau"
 			"."
 			"!"
 		word
-			"So that I"
 			"So that we"
 			"So that you"
 			"To"
