@@ -3,12 +3,15 @@
 # Ship type: Hauler VI (modified)
 # Luxurious StarQueen glass type cockpit on one side.
 # Other side of ship is fully dedicated to a spinal weapon (chameleon tongue or dragons flame).
-# Very slow moving and turning ship when all fighters are docked. Relatively fast when they are deployed.
+# Very very slow moving and turning ship when fighters are docked. Relatively fast when they are deployed.
+# Possibly some Esher-like impossible shapes to interconnect the two sets of 3 pods.
+# Have some ships flying in formation around it. (With a stay-in-formation personality on those ships.)
 
 # Alternatives considered (but not chosen):
 # - Have parts of the Hauler VI detach as separate ships (cockpit as fast attacker with flamethrowers, pods as missile launchers)
 # - Have all parts move at very high speed after separation.
 # - Have an anti-matter cannon built in into one side (or in a pod that splits off as a separate ship).
+# - Weapon that works with patterns like the formations. (Too specific, better just use formations as-is.)
 
 # Alternative ships considered (instead of the Hauler VI or possibly as ships flying in formation):
 # - A ship in Hexagonal shape (flat side front)?
@@ -34,12 +37,10 @@
 # - "Preservation Beam" "Beam that restores shield (fully) and hull to just below disabled on hostile ships."
 
 # Other possible person names:
-# - Asbran; sword from a seagod, Dutch/Frysian. Similar to Excalibur, but less known.
 person "Danau"
 	government "Author"
 	personality
 		heroic
-		disables
 		unconstrained
 		opportunistic
 		# Merchant personalities? Staying at distance?
@@ -101,7 +102,6 @@ person "Danau"
 		word
 			"This is a nice ship, "
 		word
-			"and I especially like the custom weapons that I have put on it."
 			"as long as you don't activate the cargo refridgeration systems."
 			"but it didn't get beyond the prototype stage yet."
 			"but it is not for sale on the regular market."
