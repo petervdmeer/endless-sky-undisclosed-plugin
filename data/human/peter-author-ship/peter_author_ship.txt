@@ -4,7 +4,7 @@
 # Luxurious StarQueen glass type cockpit on one side.
 # Other side of ship is fully dedicated to a spinal weapon (chameleon tongue or dragons flame).
 # Very very slow moving and turning ship when fighters are docked. Relatively fast when they are deployed.
-# Possibly some Esher-like impossible shapes to interconnect the two sets of 3 pods.
+# Possibly some Esher-like impossible shapes to interconnect the two sets of 3 pods. (Only if this works, otherwise just regular interconnects.)
 # Have some ships flying in formation around it. (With a stay-in-formation personality on those ships.)
 #  Hauler I, Hauler II and Hauler III ships seem ideal candidates to fly in formation around a Hauler VI.
 #  The fighters docked inside the Hauler VI could also assume formation once they undock. (But then they should not be equipped with flamethrowers, inhibitors and fast engines, but with something that makes sense for close escort ships.)
