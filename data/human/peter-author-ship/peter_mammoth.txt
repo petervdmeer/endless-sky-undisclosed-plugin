@@ -1,4 +1,4 @@
-ship "JS Mammoth"
+ship "Mammoth PTR"
 	sprite "ship/pirate mammoth"
 	thumbnail "thumbnail/pirate mammoth"
 	attributes
@@ -8,14 +8,14 @@ ship "JS Mammoth"
 		hull 50000
 		"required crew" 2
 		"bunks" 2
-		"mass" 1127
+		"mass" 1361
 		"drag" 18.5
 		"heat dissipation" .8
 		"fuel capacity" 200
 		"cargo space" 0
-		"outfit space" 3790
-		"weapon capacity" 1170
-		"engine capacity" 540
+		"outfit space" 2800
+		"weapon capacity" 900
+		"engine capacity" 400
 		weapon
 			"blast radius" 140
 			"shield damage" 1400
@@ -23,26 +23,26 @@ ship "JS Mammoth"
 			"hit force" 2100
 	outfits
 		"Bunk Room" 4
-		"Fuel Processor" 4
+		"Luxury Accommodations"
+		"Fuel Pod" 3
+		"Cargo Expansion" 12
 
-		"Systems Core (Large)" 3
-		"Overclocked Repair Module" 14
-		"Large Heat Shunt" 5
+		"Particle Cannon" 6
+		"Proton Turret" 9
+		"Heavy Anti-Missile Turret" 4
 
-		"Husk-Slice" 6
-		"Shield Disruptor Turret" 7
-		"Husk-Slice Turret" 6
-		"Blaze-Pike Turret" 2
-		"Tier 3 Anti-Missile" 2
-		"Heliarch Attractor"
+		"Armageddon Core" 4
+		"LP036a Battery Pack"
+		"S-970 Regenerator" 6
+		"Liquid Helium Cooler" 5
+		"Catalytic Ramscoop"
 
-		"Quantum Keystone"
-		"Blue Sun Reactor" 7
-		"Jump Drive"
-		"Thruster (Stellar Class)" 3
-		"Steering (Stellar Class)" 2
+		"AR120 Reverse Thruster"
+		"A520 Atomic Thruster"
+		"A525 Atomic Steering"
+		"Ionic Afterburner" 2
 		"Scram Drive"
-		
+
 	engine 17 147 0.8
 	engine -17 147 0.8
 	engine -34 143 0.8
@@ -55,44 +55,25 @@ ship "JS Mammoth"
 	"reverse engine" -92 43.5
 	"reverse engine" 92 43.5
 
-	gun -12 -136 "Husk-Slice"
-	gun 12 -136 "Husk-Slice"
-	gun -28 -84 "Husk-Slice"
-	gun 28 -84 "Husk-Slice"
-	gun -47.5 -57.5 "Husk-Slice"
-	gun 47.5 -57.5 "Husk-Slice"
-
-	# Turrets directly behind cockpit
-	turret -12 -114 "Heliarch Attractor"
-	turret 12 -114 "Blaze-Pike Turret"
-
-	# Front section turrets
-	turret -31 -50 "Shield Disruptor Turret"
-	turret 31 -50 "Shield Disruptor Turret"
-
-	# Turrets second row behind cockpit
-	turret -10 -88 "Blaze-Pike Turret"
-	turret 10 -88 "Shield Disruptor Turret"
-
-	# Turrets main section, center front
-	turret -14.5 0 "Tier 3 Anti-Missile"
-	turret 14.5 0 "Tier 3 Anti-Missile"
-
-	# Outward section turrets
-	turret -96 66 "Husk-Slice Turret"
-	turret 96 66 "Husk-Slice Turret"
-
-	# Tail turrets
-	turret -26 114 "Husk-Slice Turret"
-	turret 26 114 "Husk-Slice Turret"
-	turret -62 138 "Husk-Slice Turret"
-	turret 62 138 "Husk-Slice Turret"
-
-	# Turrets main section, back
-	turret -47.5 33.5 "Shield Disruptor Turret"
-	turret 47.5 33.5 "Shield Disruptor Turret"
-	turret -22 66.5 "Shield Disruptor Turret"
-	turret 22 66.5 "Shield Disruptor Turret"
+	gun -12 -136 "Particle Cannon"
+	gun 12 -136 "Particle Cannon"
+	gun -28 -84 "Particle Cannon"
+	gun 28 -84 "Particle Cannon"
+	gun -47.5 -57.5 "Particle Cannon"
+	gun 47.5 -57.5 "Particle Cannon"
+	turret 0 -89 "Proton Turret"
+	turret -31 -50 "Heavy Anti-Missile Turret"
+	turret 31 -50 "Heavy Anti-Missile Turret"
+	turret -14.5 0 "Proton Turret"
+	turret 14.5 0 "Proton Turret"
+	turret -47.5 33.5 "Proton Turret"
+	turret 47.5 33.5 "Proton Turret"
+	turret -96 66 "Proton Turret"
+	turret 96 66 "Proton Turret"
+	turret -22 66.5 "Heavy Anti-Missile Turret"
+	turret 22 66.5 "Heavy Anti-Missile Turret"
+	turret -26 114 "Proton Turret"
+	turret 26 114 "Proton Turret"
 
 	# Cockpit and front section bays
 	bay Fighter 0 -118 under
@@ -123,12 +104,12 @@ ship "JS Mammoth"
 	bay Drone 90 60 under
 		angle 80
 		"launch effect" "human external"
-	# Tail/back section (facing backwards)
+	# Tail/back section
 	bay Drone -32 114 under
-		angle -80
+		angle -110
 		"launch effect" "human external"
 	bay Drone 32 114 under
-		angle 80
+		angle 110
 		"launch effect" "human external"
 
 	leak "leak" 30 50
@@ -139,4 +120,5 @@ ship "JS Mammoth"
 	explode "large explosion" 35
 	explode "huge explosion" 20
 	"final explode" "final explosion large"
-	description "Overpowered test-ship. Battle; interceptor and sustained combat (tank) version."
+	description "This is a rare, extensively modified Behemoth, modified even further than usual. Overpowered test-ship."
+
