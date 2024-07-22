@@ -1,0 +1,68 @@
+ship "JS Mammoth" "JS Mammoth Flagship"
+	outfits
+		Brig
+		"Luxury Accommodations"
+		"Research Laboratory"
+		"Scanning Module" 2
+
+		"Bunk Room" 24
+		"Cargo Expansion" 37
+		"Fuel Processor" 6
+
+		"Systems Core (Large)" 3
+		"Crystal Capacitor" 3
+		"Overclocked Repair Module" 11
+		"Large Heat Shunt" 2
+
+		"Husk-Slice" 6
+		"Shield Disruptor Turret" 7
+		"Husk-Slice Turret" 6
+		"Grab-Strike Turret" 3
+		"Tier 3 Anti-Missile" 2
+
+		"Cloaking Device"
+
+		"Void Rifle"
+		"Enforcer Confrontation Gear" 200
+		"Anti-Materiel Gun" 200
+
+		"Quantum Keystone"
+		"Blue Sun Reactor" 2
+		"Jump Drive"
+		"A860 Atomic Thruster"
+		"A865 Atomic Steering"
+		"Scram Drive"
+
+	# Turrets directly behind cockpit
+	turret "Grab-Strike Turret"
+	turret "Grab-Strike Turret"
+
+	# Front section turrets
+	turret "Shield Disruptor Turret"
+	turret "Shield Disruptor Turret"
+
+	# Turrets second row behind cockpit
+	turret "Grab-Strike Turret"
+	turret "Shield Disruptor Turret"
+
+	# Turrets main section, center front
+	turret "Tier 3 Anti-Missile"
+	turret "Tier 3 Anti-Missile"
+
+	# Outward section turrets
+	turret "Husk-Slice Turret"
+	turret "Husk-Slice Turret"
+	turret "Husk-Slice Turret"
+	turret "Husk-Slice Turret"
+
+	# Tail turrets
+	turret "Husk-Slice Turret"
+	turret "Husk-Slice Turret"
+
+	# Turrets main section, back
+	turret "Shield Disruptor Turret"
+	turret "Shield Disruptor Turret"
+	turret "Shield Disruptor Turret"
+	turret "Shield Disruptor Turret"
+
+	description "Overpowered test-ship. Flagship config. Used for testing new content. Mostly human tech to avoid spoilers."

@@ -1,0 +1,138 @@
+ship "JS Mammoth"
+	sprite "ship/pirate mammoth"
+	thumbnail "thumbnail/pirate mammoth"
+	attributes
+		category "Superheavy"
+		"cost" 18800000
+		"shields" 22400
+		"hull" 75400
+		"required crew" 2
+		"bunks" 2
+		"mass" 1127
+		"drag" 18.5
+		"heat dissipation" .8
+		"fuel capacity" 200
+		"cargo space" 0
+		"outfit space" 3790
+		"weapon capacity" 1170
+		"engine capacity" 540
+		weapon
+			"blast radius" 140
+			"shield damage" 1400
+			"hull damage" 780
+			"hit force" 2100
+	outfits
+		"Bunk Room" 4
+		"Fuel Processor" 4
+
+		"Systems Core (Large)" 3
+		"Overclocked Repair Module" 14
+		"Large Heat Shunt" 5
+
+		"Husk-Slice" 6
+		"Shield Disruptor Turret" 7
+		"Husk-Slice Turret" 6
+		"Blaze-Pike Turret" 2
+		"Tier 3 Anti-Missile" 2
+		"Heliarch Attractor"
+
+		"Quantum Keystone"
+		"Blue Sun Reactor" 7
+		"Jump Drive"
+		"Thruster (Stellar Class)" 3
+		"Steering (Stellar Class)" 2
+		"Scram Drive"
+		
+	engine 17 147 0.8
+	engine -17 147 0.8
+	engine -34 143 0.8
+	engine 34 143 0.8
+	engine -56 148.5 0.6
+	engine 56 148.5 0.6
+
+	# Additional engines (outwards sections)
+	engine -92 90 0.6
+	engine 92 90 0.6
+
+	# Cockpit guns (hardpoint embedded)
+	gun -12 -136 "Husk-Slice"
+	gun 12 -136 "Husk-Slice"
+	# Front section guns (hardpoint embedded)
+	gun -28 -84 "Husk-Slice"
+	gun 28 -84 "Husk-Slice"
+	# Original guns (hardpoint visible)
+	gun -47.5 -57.5 "Husk-Slice"
+	gun 47.5 -57.5 "Husk-Slice"
+
+	# Turrets directly behind cockpit
+	turret -12 -114 "Heliarch Attractor"
+	turret 12 -114 "Blaze-Pike Turret"
+
+	# Front section turrets
+	turret -31 -50 "Shield Disruptor Turret"
+	turret 31 -50 "Shield Disruptor Turret"
+
+	# Turrets second row behind cockpit
+	turret -10 -88 "Blaze-Pike Turret"
+	turret 10 -88 "Shield Disruptor Turret"
+
+	# Turrets main section, center front
+	turret -14.5 0 "Tier 3 Anti-Missile"
+	turret 14.5 0 "Tier 3 Anti-Missile"
+
+	# Outward section turrets
+	turret -96 66 "Husk-Slice Turret"
+	turret 96 66 "Husk-Slice Turret"
+
+	# Tail turrets
+	turret -26 114 "Husk-Slice Turret"
+	turret 26 114 "Husk-Slice Turret"
+	turret -62 138 "Husk-Slice Turret"
+	turret 62 138 "Husk-Slice Turret"
+
+	# Turrets main section, back
+	turret -47.5 33.5 "Shield Disruptor Turret"
+	turret 47.5 33.5 "Shield Disruptor Turret"
+	turret -22 66.5 "Shield Disruptor Turret"
+	turret 22 66.5 "Shield Disruptor Turret"
+
+	# Cockpit and front section bays
+	bay Fighter 0 -118 under
+		"launch effect" "human external"
+	bay Fighter -32 -50 under
+		"launch effect" "human external"
+	bay Fighter 32 -50 under
+		"launch effect" "human external"
+
+	# Main section (sides and mid) bays
+	bay Fighter -36 34
+		back
+		"launch effect" "human external"
+	bay Fighter 36 34
+		back
+		"launch effect" "human external"
+
+	# Outwards sections
+	bay Fighter -90 60 under
+		"launch effect" "human external"
+	bay Fighter 90 60 under
+		"launch effect" "human external"
+
+	# Tail/back section (facing backwards)
+	bay Fighter -32 114 under
+		back
+		"launch effect" "human external"
+	bay Fighter 32 114 under
+		back
+		"launch effect" "human external"
+
+	leak "leak" 30 50
+	leak "flame" 30 80
+	leak "big leak" 50 30
+	explode "small explosion" 15
+	explode "medium explosion" 25
+	explode "large explosion" 35
+	explode "huge explosion" 20
+	"final explode" "final explosion large"
+
+	description "Overpowered test-ship. Battle; interceptor and sustained combat (tank) version."
