@@ -27,6 +27,8 @@ ship "Mammoth PTR"
 		"Fuel Pod" 3
 		"Cargo Expansion" 12
 
+		"Sidewinder Missile Launcher" 2
+		"Sidewinder Missile" 90
 		"Particle Cannon" 6
 		"Proton Turret" 9
 		"Heavy Anti-Missile Turret" 4
@@ -61,6 +63,12 @@ ship "Mammoth PTR"
 	gun 28 -84 "Particle Cannon"
 	gun -47.5 -57.5 "Particle Cannon"
 	gun 47.5 -57.5 "Particle Cannon"
+	gun -98 44 "Sidewinder Missile Launcher"
+		angle -20
+		parallel
+	gun 98 44 "Sidewinder Missile Launcher"
+		angle 20
+		parallel
 	turret 0 -89 "Proton Turret"
 	turret -31 -50 "Heavy Anti-Missile Turret"
 	turret 31 -50 "Heavy Anti-Missile Turret"
@@ -86,15 +94,7 @@ ship "Mammoth PTR"
 	bay Drone -50 6 under
 		angle -80
 		"launch effect" "human external"
-	bay Fighter 0 6 under
-		"launch effect" "human external"
 	bay Drone 50 6 under
-		angle 80
-		"launch effect" "human external"
-	bay Drone -40 58 under
-		angle -80
-		"launch effect" "human external"
-	bay Drone 40 58 under
 		angle 80
 		"launch effect" "human external"
 	# Outwards sections
@@ -105,11 +105,11 @@ ship "Mammoth PTR"
 		angle 80
 		"launch effect" "human external"
 	# Tail/back section
-	bay Drone -32 114 under
-		angle -110
+	bay Drone -40 114 under
+		angle -105
 		"launch effect" "human external"
-	bay Drone 32 114 under
-		angle 110
+	bay Drone 40 114 under
+		angle 105
 		"launch effect" "human external"
 
 	leak "leak" 30 50
@@ -120,5 +120,5 @@ ship "Mammoth PTR"
 	explode "large explosion" 35
 	explode "huge explosion" 20
 	"final explode" "final explosion large"
-	description "This is a rare, extensively modified Behemoth, modified even further than usual. Overpowered test-ship."
+	description "This is a rare, extensively modified Behemoth, modified even further than usual."
 
