@@ -2,7 +2,7 @@ mission "Earth - Ancient Spacecraft intro"
 	source
 		planet Earth
 	to offer
-		1 == 0
+		never
 	on offer
 		conversation
 			"Hey captain! Nice to see you here on Earths day!"
